@@ -80,7 +80,7 @@ img{
 .text{
     background-color: goldenrod;
     display: grid;
-    gap: .8rem;
+    gap: 1rem;
     padding: 1rem 1rem;
 }
 .button{

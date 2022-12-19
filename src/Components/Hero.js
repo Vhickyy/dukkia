@@ -26,14 +26,13 @@ const Wrapper = styled.aside`
     box-shadow: 2px 2px 5px gray, -3px -3px 7px gray;
     border-radius: 1rem;
 .first{
-    line-height: 3rem;
+    line-height: 2.6rem;
     letter-spacing: .2rem;
     /* background-color: pink; */
     justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* padding: 3rem; */
     width: 70%;
 }
 .second{
@@ -47,13 +46,13 @@ img{
 }
 button{
     /* width: 20rem; */
-    padding: 1rem;
+    padding: .8rem;
     border: none;
     border-radius: 0.5rem;
     margin-top: 2rem;
     background-color: blue;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: capitalize;
 }
 @media (min-width: 970px){
