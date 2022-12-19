@@ -24,18 +24,16 @@ const Instruction = () => {
 export default Instruction
 const Wrapper = styled.aside`
     background-color: gold;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     display: grid;
     row-gap: 1rem;
     border-radius: .5rem;
     font-size: 1.3rem;
-    width: 80%;
-    li{
-        margin-bottom: .5rem;
-    }
+    width: 85%;
 .list{
-    padding: 0 3rem;
-    /* line-height: 1.5rem; */
+    padding-left: 2rem;
+    display: grid;
+    gap: .4rem;
     button{
         margin-left: .5rem;
         padding: .5rem 1rem;

@@ -38,7 +38,7 @@ export default Form
 
 const Wrapper= styled.div`
 margin-top: 3rem;
-width: 80%;
+width: 85%;
 form{
     display: flex;
     flex-direction: column;
