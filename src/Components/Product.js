@@ -82,10 +82,10 @@ img{
     justify-content: space-between; */
     display: grid;
     gap: 1rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 .button{
-    padding: 1rem .5rem;
+    padding: .8rem .5rem;
     border: none;
     border-radius: .5rem;
     /* margin-top: 1rem; */
