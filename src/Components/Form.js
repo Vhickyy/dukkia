@@ -48,7 +48,7 @@ form{
 form div{
     display: flex;
     flex-direction: column;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     margin-bottom: 1rem;
 }
 .text {
@@ -56,7 +56,7 @@ form div{
     border: 2px solid gray;
     /* height: 1.5rem; */
     margin-top: .3rem;
-    padding: .5rem 1rem;
+    padding: .4rem 1rem;
     font-size: 1.2rem;
     outline: none;
 }
@@ -68,7 +68,7 @@ button{
     align-self: flex-end;
     margin-top: 1rem;
     padding: .5rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: .5rem;
     border: none;
     background-color: blue;
