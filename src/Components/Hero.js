@@ -21,7 +21,6 @@ const Wrapper = styled.aside`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
-    /* justify-items: space-between; */
     font-size: 1.8rem;
     background-color: white;
     box-shadow: 2px 2px 5px gray, -3px -3px 7px gray;
@@ -29,7 +28,6 @@ const Wrapper = styled.aside`
 .first{
     line-height: 2.rem;
     letter-spacing: .2rem;
-    /* background-color: pink; */
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -51,7 +49,7 @@ button{
     border: none;
     border-radius: 0.5rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #244D91;
     color: white;
     font-size: 1.3rem;
     text-transform: capitalize;

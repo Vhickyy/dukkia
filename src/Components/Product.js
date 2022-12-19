@@ -72,7 +72,7 @@ img{
     height: 100%;
 }
 .text{
-    background-color: goldenrod;
+    background-color: #F1DE78;
     display: grid;
     gap: 1rem;
     padding: 1rem 1rem;
@@ -81,7 +81,7 @@ img{
     padding: .8rem .5rem;
     border: none;
     border-radius: .5rem;
-    background-color: blue;
+    background-color: #244D91;
     color: white;
     align-self: center;
     font-size: 1rem;

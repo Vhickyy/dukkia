@@ -10,7 +10,7 @@ const Header = () => {
                     <div className='top'>
                         <h4>Buy Gold</h4>
                         <p>$432.43/oz</p>
-               </div>
+                    </div>
                     <FaBars size='40' className='mobile'/>
                     <div className='desktop'>
                         <div className='top-input'>
@@ -31,24 +31,7 @@ const Header = () => {
             </div>
         </nav>
     </Wrapper>
-    // <Wrapper>
-    //     <nav>
-    //         <div className='flex-nav'>
-    //             <h1>LOGO</h1>
-    //             <FaBars size='40' className='mobile'/>
-    //         <div className='desktop'>
-    //             {/* <div> */}
-    //                 <input type="text" placeholder='Search here' />
-    //                 {/* <FaSearch/> */}
-    //             {/* </div> */}
-    //             <h2>FAQ</h2>
-    //             <button>Open Account</button>
-    //         </div>
-    //         </div>
-            
-    //         <input className='mobile-input' type="text" placeholder='Search here' />
-    //     </nav>
-    // </Wrapper>
+   
   )
 }
 
@@ -65,10 +48,11 @@ const Wrapper = styled.header`
     }
     .end-nav{
         width: 100%;
-        background-color: blue;
+        background-color: #244D91;
     }
     .container{
         width: 85%;
+        /* background-color: brown; */
         /* max-width: 550px; */
         margin: 0 auto;
         height: 4rem;
@@ -112,11 +96,11 @@ const Wrapper = styled.header`
         /* background-color: brown; */
     }
     button{
-    /* width: 10rem; */
+    width: 10rem;
     padding: .7rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: blue;
+    background-color: #244D91;
     color: white;
     font-size: 1rem;
     text-transform: capitalize;
@@ -126,7 +110,7 @@ const Wrapper = styled.header`
             display: none;
         }
         .desktop{
-            width: 70%;
+            /* width: 70%; */
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             align-items: center;
@@ -194,3 +178,23 @@ const Wrapper = styled.header`
 //     }
 // }
 // `
+
+
+ // <Wrapper>
+    //     <nav>
+    //         <div className='flex-nav'>
+    //             <h1>LOGO</h1>
+    //             <FaBars size='40' className='mobile'/>
+    //         <div className='desktop'>
+    //             {/* <div> */}
+    //                 <input type="text" placeholder='Search here' />
+    //                 {/* <FaSearch/> */}
+    //             {/* </div> */}
+    //             <h2>FAQ</h2>
+    //             <button>Open Account</button>
+    //         </div>
+    //         </div>
+            
+    //         <input className='mobile-input' type="text" placeholder='Search here' />
+    //     </nav>
+    // </Wrapper>

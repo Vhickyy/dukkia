@@ -71,7 +71,7 @@ button{
     font-size: 1.1rem;
     border-radius: .5rem;
     border: none;
-    background-color: blue;
+    background-color: #244D91;
     color: #fff;
     flex-grow: 1;
 }

@@ -23,7 +23,7 @@ const Instruction = () => {
 
 export default Instruction
 const Wrapper = styled.aside`
-    background-color: gold;
+    background-color: #F1DE78;
     padding: 1rem 1rem;
     display: grid;
     row-gap: 1rem;
