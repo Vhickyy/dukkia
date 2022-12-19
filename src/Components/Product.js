@@ -63,12 +63,12 @@ const Wrapper = styled.aside`
     background-color: green;
     margin-bottom: 3rem;
     flex: 0 1 100%;
-    height: 40rem;
+    height: 30rem;
     border-radius: 1rem;
     overflow: hidden;
 }
 .img{
-    height: 40%;
+    height: 60%;
 }
 img{
     width: 100%;
