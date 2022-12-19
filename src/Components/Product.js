@@ -68,7 +68,8 @@ const Wrapper = styled.aside`
     overflow: hidden;
 }
 .img{
-    height: 60%;
+    /* height: 60%; */
+    height: 20rem;
 }
 img{
     width: 100%;
@@ -76,10 +77,7 @@ img{
 }
 .text{
     background-color: goldenrod;
-    height: 40%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
+    /* height: 40%; */
     display: grid;
     gap: 1rem;
     padding: 1rem 1rem;
