@@ -54,23 +54,17 @@ export default Product
 const Wrapper = styled.aside`
 
     /* background-color: brown; */
-    margin-top: 3rem;
+    margin-top: 4rem;
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 .item{
     background-color: green;
-    /* margin-bottom: 3rem; */
     flex: 0 1 100%;
-    /* height: 30rem; */
     border-radius: 1rem;
     overflow: hidden;
 }
-/* .item{
-    display: grid;
-} */
 .img{
-    /* height: 60%; */
     height: 18rem;
 }
 img{

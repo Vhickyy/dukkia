@@ -39,20 +39,21 @@ margin: 0 auto;
 }
 img{
     width: 100%;
-    height: 25rem;
+    height: 22rem;
+    border-radius: .5rem;
 }
 .card{
     /* background-color: #fff; */
     border-radius: .5rem;
     overflow: hidden;
     display: grid;
-    gap: 1.5rem;
-    padding: 3rem;
+    gap: 1.2rem;
+    padding: 2rem 3rem;
     box-shadow: 5px 3px 5px gray, -5px -3px 7px rgba(100,100,100,.3);
 }
 button{
-    width: 7rem;
-    padding: .8rem 1rem;
+    /* width: 5rem; */
+    padding: .8rem 2rem;
     border-radius: .7rem;
     border: 1px solid black;
     margin-right: 1rem;
