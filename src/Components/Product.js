@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import gold from '../Images/gold.jpg'
+import { Link } from 'react-router-dom'
 
 const data = [
     {
@@ -39,7 +40,8 @@ const Product = () => {
                                 <p>Shop</p>
                             </div>
                             <p className='desc'>{item.desc}</p>
-                            <button className='button'>{item.btn}</button>
+                            <Link to={'goldbars'}><button className='button'>{item.btn}</button></Link>
+                            
                         </div>
                     </div>
                 )
