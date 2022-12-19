@@ -57,6 +57,8 @@ button{
     border-radius: .7rem;
     border: 1px solid black;
     margin-right: 1rem;
+    color: black;
+    background-color: white;
 }
 @media (min-width: 900px){
 
