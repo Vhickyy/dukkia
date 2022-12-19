@@ -64,12 +64,12 @@ form div{
     /* border: 2px solid blue; */
 }
 button{
-    width: 15rem;
+    /* width: 15rem; */
     align-self: flex-end;
     margin-top: 1rem;
-    padding: 1rem 1rem;
+    padding: .5rem 1rem;
     font-size: 1.2rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
     border: none;
     background-color: blue;
     color: #fff;
