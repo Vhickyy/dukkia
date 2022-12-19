@@ -68,7 +68,7 @@ const Wrapper = styled.aside`
     overflow: hidden;
 }
 .img{
-    height: 60%;
+    height: 40%;
 }
 img{
     width: 100%;
