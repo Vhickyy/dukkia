@@ -38,10 +38,6 @@ const Wrapper = styled.aside`
 }
 .second{
     display: none;
-    /* width: 70%;
-    justify-self: center;
-    height: 300px;
-    border-radius: 0.5rem; */
 }
 img{
     width: 100%;
@@ -68,7 +64,7 @@ button{
         display: block;
         width: 70%;
         justify-self: center;
-        height: 400px;
+        height: 300px;
         border-radius: 0.5rem;
     }
     button{
