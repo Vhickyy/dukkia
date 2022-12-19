@@ -37,7 +37,7 @@ const Form = () => {
 export default Form
 
 const Wrapper= styled.div`
-margin-top: 3rem;
+margin-top: 2rem;
 width: 85%;
 form{
     display: flex;
