@@ -63,7 +63,7 @@ const Wrapper = styled.aside`
     background-color: green;
     margin-bottom: 3rem;
     flex: 0 1 100%;
-    height: 30rem;
+    /* height: 30rem; */
     border-radius: 1rem;
     overflow: hidden;
 }
