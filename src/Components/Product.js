@@ -41,7 +41,6 @@ const Product = () => {
                             </div>
                             <p className='desc'>{item.desc}</p>
                             <Link to={'goldbars'}><button className='button'>{item.btn}</button></Link>
-                            
                         </div>
                     </div>
                 )
@@ -56,20 +55,23 @@ const Wrapper = styled.aside`
 
     /* background-color: brown; */
     margin-top: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 .item{
     background-color: green;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     flex: 0 1 100%;
     /* height: 30rem; */
     border-radius: 1rem;
     overflow: hidden;
 }
+/* .item{
+    display: grid;
+} */
 .img{
     /* height: 60%; */
-    height: 20rem;
+    height: 18rem;
 }
 img{
     width: 100%;
@@ -77,39 +79,17 @@ img{
 }
 .text{
     background-color: goldenrod;
-    /* height: 40%; */
     display: grid;
-    gap: 1rem;
+    gap: .8rem;
     padding: 1rem 1rem;
 }
 .button{
     padding: .8rem .5rem;
     border: none;
     border-radius: .5rem;
-    /* margin-top: 1rem; */
     background-color: blue;
     color: white;
     align-self: center;
-    width: 10rem;
-    /* font-size: 1rem; */
-    /* margin-bottom: 1rem; */
-}
-.desc{
-    width: 80%;
-}
-@media (min-width:750px){
-    .item{
-        flex:0 1 45%;
-    }
-    .desc{
-    width: 90%;
-    /* margin-bottom: 1.3rem; */
-    }
-}
-@media (min-width:1200px){
-        justify-content: space-between;
-    .item{
-        flex:0 1 30%;
-    }
+    font-size: 1rem;
 }
 `

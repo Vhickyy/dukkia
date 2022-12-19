@@ -15,7 +15,7 @@ const Products = () =>{
 export default Products
 
 const Wrapper = styled.section`
-padding-top: 4rem;
+padding: 4rem 0;
 width: 85%;
 /* max-width: 550px; */
 margin: 0 auto;
