@@ -91,7 +91,7 @@ img{
     color: white;
     align-self: center;
     width: 10rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     /* margin-bottom: 1rem; */
 }
 .desc{
@@ -102,7 +102,7 @@ img{
         flex:0 1 45%;
     }
     .desc{
-    width: 80%;
+    width: 90%;
     /* margin-bottom: 1.3rem; */
     }
 }
