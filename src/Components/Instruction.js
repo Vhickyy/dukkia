@@ -28,7 +28,7 @@ const Wrapper = styled.aside`
     display: grid;
     row-gap: 1rem;
     border-radius: .5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     width: 85%;
 .list{
     padding-left: 2rem;

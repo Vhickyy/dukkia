@@ -48,7 +48,7 @@ form{
 form div{
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 .text {
