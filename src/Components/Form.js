@@ -54,10 +54,10 @@ form div{
 .text {
     border-radius: .5rem;
     border: 2px solid gray;
-    height: 2.5rem;
+    /* height: 1.5rem; */
     margin-top: .3rem;
-    padding: 1.5rem 1rem;
-    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
     outline: none;
 }
 .text:focus{

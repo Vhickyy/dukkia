@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {FaBars, FaSearch} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <Wrapper>
@@ -17,7 +18,8 @@ const Header = () => {
                             <FaSearch size='2rem' />
                         </div>
                         <h2>FAQ</h2>
-                        <button>Open Account</button>  
+                        <Link to={'/open-account'}><button>Open Account</button></Link>
+                          
                     </div>
                 </div>
             </div>

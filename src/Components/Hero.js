@@ -1,11 +1,12 @@
 import styled from "styled-components"
 import gold from '../Images/gold.jpg'
+import { Link } from "react-router-dom"
 const Hero = () => {
   return (
     <Wrapper>
         <div className='first'>
             <h3>Buy and sell gold and precious metals with trust.</h3>
-            <button>Open an account</button>
+            <Link to={'/open-account'}><button>Open an account</button></Link>
         </div>
         <div className='second'>
             <img src={gold} alt="" />
