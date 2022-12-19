@@ -16,7 +16,7 @@ const Hero = () => {
 
 export default Hero
 const Wrapper = styled.aside`
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
@@ -26,7 +26,7 @@ const Wrapper = styled.aside`
     box-shadow: 2px 2px 5px gray, -3px -3px 7px gray;
     border-radius: 1rem;
 .first{
-    line-height: 2.6rem;
+    line-height: 2.rem;
     letter-spacing: .2rem;
     /* background-color: pink; */
     justify-self: center;
