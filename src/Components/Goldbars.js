@@ -39,7 +39,7 @@ margin: 0 auto;
 }
 img{
     width: 100%;
-    height: 22rem;
+    height: 21rem;
     border-radius: .5rem;
 }
 .card{
@@ -47,8 +47,9 @@ img{
     border-radius: .5rem;
     overflow: hidden;
     display: grid;
-    gap: 1.2rem;
-    padding: 2rem 3rem;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    background-color: whitesmoke;
     box-shadow: 5px 3px 5px gray, -5px -3px 7px rgba(100,100,100,.3);
 }
 button{
@@ -60,10 +61,11 @@ button{
     color: black;
     background-color: white;
 }
-@media (min-width: 900px){
+@media (min-width: 785px){
 
     .container{
-        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        /* background-color: pink; */
+        grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
     }
 }
 `

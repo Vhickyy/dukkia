@@ -60,7 +60,7 @@ const Wrapper = styled.aside`
     margin-top: 4rem;
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
 .item{
     background-color: green;
     flex: 0 1 100%;
@@ -68,7 +68,7 @@ const Wrapper = styled.aside`
     overflow: hidden;
 }
 .img{
-    height: 18rem;
+    height: 16rem;
 }
 img{
     width: 100%;
@@ -77,7 +77,7 @@ img{
 .text{
     background-color: #F1DE78;
     display: grid;
-    gap: 1rem;
+    gap: .8rem;
     padding: 1rem 1rem;
 }
 .button{

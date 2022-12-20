@@ -1,32 +1,12 @@
 import styled from "styled-components"
 import gold from '../Images/gold.jpg'
+import Poolinfo from "./Poolinfo"
 const Poolallocated = () => {
   return (
     <Wrapper>
       <h3>About Our Pool Allocated Gold Product</h3>
         <div className="content">
-            <div>
-               <p>Pool Allocated Gold offers an offer an ultra-low-cost alternative to buying physical bullion bars and coins. It allows co-ownership of a gold bar or a pool of gold bars based on budget and Naira value and accumulate holdings over time.</p>
-              <p className="endp"> The pool allocated gold is fully backed by pool of gold bars fully segregated within our Brink's vault. Holdings can be converted to physical gold bars or coins at any time subject to terms and conditions.</p>
-              <div className="desc">
-                <div>
-                  <p className="bold">Minimum purchase amount:</p>
-                  <p>N5,000</p>
-                </div>
-                <div>
-                  <p className="bold">Weight range:</p>
-                  <p> 0.1g - 999.99g</p>
-                </div>
-                <div>
-                  <p className="bold">Fineness:</p>
-                  <p>999.9</p>
-                </div>
-                <div>
-                  <p className="bold">Manufacturer:</p>
-                  <p>LBMA Good Delivery Refiner</p>
-                </div>
-              </div>
-            </div>
+            <Poolinfo/>
            <div>
             <h4>Pool allocated calculator</h4>
             <ul>
@@ -36,6 +16,36 @@ const Poolallocated = () => {
             <div>
               <img src={gold} alt="" />
             </div>
+            <form>
+              <div>
+                <label htmlFor="name">Name:</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div>
+                <label htmlFor="email">Email:</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div>
+                <label htmlFor="goldaccount">Gold account number:</label>
+                <input type="text" name="goldaccount" id="goldaccount" />
+              </div>
+              <div>
+                <label htmlFor="product">product:</label>
+                <input type="text" name="product" id="product" />
+              </div>
+              <div>
+                <label htmlFor="Quantity">Quantity:</label>
+                <input type="text" name="Quantity" id="Quantity" />
+              </div>
+              <div>
+                <label htmlFor="Quantity">Quantity:</label>
+                <input type="text" name="Quantity" id="Quantity" />
+              </div>
+              <div>
+                <label htmlFor="Quantity">Quantity:</label>
+                <input type="text" name="Quantity" id="Quantity" />
+              </div>
+            </form>
            </div>
         </div>
     </Wrapper>
@@ -54,18 +64,9 @@ margin: 0 auto;
   gap: 1rem;
   line-height: 1.5rem;
   word-spacing: .1rem;
+  padding: 1rem;
 }
-.bold{
-  font-weight: bold;
-}
-.desc{
-  margin-top: 1rem;
-  display: grid;
-  gap: .5rem;
-}
-.endp{
-  margin-top: 1rem;
-}
+
 @media (min-width: 800px){
   .content{
     grid-template-columns: 1fr 1fr;
