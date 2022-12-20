@@ -8,21 +8,24 @@ const data = [
         img: '../Images/gold.jpg',
         name: 'Gold Bar',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
-        btn: "Buy/sell Gold Bars"
+        btn: "Buy/sell Gold Bars",
+        url: "goldbars"
     },
     {
         id:'2',
         img: '../Images/gold.jpg',
         name: 'Gold Coins',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
-        btn: "Buy/sell Gold Coins"
+        btn: "Buy/sell Gold Coins",
+        url: "goldbars"
     },
     {
         id:'3',
         img: '../Images/gold.jpg',
         name: 'Pool Allocated',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
-        btn: "Buy/sell X Qty"
+        btn: "Buy/sell X Qty",
+        url: "poolallocated"
     }
 ]
 const Product = () => {
@@ -40,7 +43,7 @@ const Product = () => {
                                 <p>Shop</p>
                             </div>
                             <p className='desc'>{item.desc}</p>
-                            <Link to={'goldbars'}><button className='button'>{item.btn}</button></Link>
+                            <Link to={item.url}><button className='button'>{item.btn}</button></Link>
                         </div>
                     </div>
                 )

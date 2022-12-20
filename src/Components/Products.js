@@ -15,8 +15,9 @@ const Products = () =>{
 export default Products
 
 const Wrapper = styled.section`
-padding: 4rem 0;
+ /* background-image: url('./Images/bgimg.jpg'); */
+ /* background-image: url('../Images/bgimg.jpg'); */
+padding: 3rem 0;
 width: 85%;
-/* max-width: 550px; */
 margin: 0 auto;
 `
