@@ -59,7 +59,7 @@ const Poolform = () => {
         <input type="email" name="email" id="email" value={values.email} onChange={change}/>
         </div>
         <div>
-        <label htmlFor="goldaccount">Gold account number:</label>
+        <label htmlFor="goldaccount">Gold-account:</label>
         <input type="text" name="goldaccount" id="goldaccount" value={values.goldaccount} onChange={change}/>
         </div>
         <div>
@@ -74,13 +74,17 @@ const Poolform = () => {
         <label htmlFor="amount">Amount:</label>
         <input type="text" name="amount" id="amount" value={values.amount} readOnly onChange={change}/>
         </div>
-        <div>
+        {/* <div> */}
             <p>Select order type</p>
-            <label htmlFor="buy">Buy</label>
-            <input type="radio" name="order" id="buy" />
-            <label htmlFor="sell">Sell</label>
-            <input type="radio" name="order" id="sell" />
-        </div>
+            <div>
+                <label htmlFor="buy">Buy</label>
+                <input type="radio" name="order" id="buy" />
+                <label htmlFor="sell">Sell</label>
+                <input type="radio" name="order" id="sell" />
+            </div>
+            <button>Place Order</button>
+            
+        {/* </div> */}
     </Wrapper>
   )
 }
@@ -88,7 +92,32 @@ const Poolform = () => {
 export default Poolform
 
 const Wrapper = styled.form`
-
+div{
+    /* background-color: green; */
+    display: flex;
+}
+input{
+    width: 64%;
+}
+label{
+    /* background-color: blue; */
+    /* width: 110px; */
+    width: 6.8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: .5rem;
+}
+button{
+  width: 10rem;
+  justify-self: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #244D91;
+  color: #fff;
+  margin-top: 1rem;
+}
 `
 
      // if(name==="quantity"){

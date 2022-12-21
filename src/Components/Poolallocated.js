@@ -42,7 +42,7 @@ margin: 0 auto;
 @media (min-width: 800px){
   .content{
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2.5rem;
   }
 }
 `
