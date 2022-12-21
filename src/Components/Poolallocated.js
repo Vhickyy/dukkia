@@ -38,7 +38,7 @@ margin: 0 auto;
   word-spacing: .1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 15px gray;
+  box-shadow: 2px 2px 7px gray;
 }
 li{
   margin-left: 1rem;

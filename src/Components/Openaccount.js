@@ -31,6 +31,6 @@ margin: 0 auto;
     align-items: center;
     padding: 1.5rem 0;
     border-radius: 0.5rem;
-    box-shadow: 2px 2px 15px gray;
+    box-shadow: 2px 2px 7px gray;
 }
 `
