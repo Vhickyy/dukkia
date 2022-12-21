@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import {data} from './Goldbardata'
 import Specification from "./Specification"
 import ProductDescription from "./ProductDescription"
+import Goldbarform from "./Goldbarform"
 const Singlegoldbar = ({order}) => {
   const {id} = useParams()
   const oneItem = data.find(item=> item.id.toString() === id)
@@ -20,17 +21,10 @@ const Singlegoldbar = ({order}) => {
         </div>
         <div className="spec1">
          <Specification amount={oneItem.amount}/>
+         <p>{order} order</p>
+         <p>Name: {}</p>
           <div>
-            <form>
-              <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" />
-              </div>
-               <div>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" />
-              </div>
-            </form>
+            <Goldbarform/>
           </div>
         </div>
       </div>
@@ -42,6 +36,8 @@ const Singlegoldbar = ({order}) => {
       </div>
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
+        <p>{order} order</p>
+        <Goldbarform order={order}/>
       </div>
       
     </Wrapper>

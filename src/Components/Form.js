@@ -1,33 +1,39 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 const Form = () => {
+    const [values,setValues] = useState({name:"",email:"",number:"",file:""})
+    const change = (e)=>{
+        const {name,value} = e.target
+        setValues({...values,[name]:value})
+    }
   return (
     <Wrapper>
         <form>
             <div >
                 <label htmlFor="name">Name</label>
-                <input type="text" className="text" name="name"/>
+                <input type="text" className="text" name="name" value={values.name} onChange={change}/>
             </div>
             <div >
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" className="text"/>
+                <input type="email" name="email" className="text" value={values.email} onChange={change}/>
             </div>
             <div >
                 <label htmlFor="phone number">Phone Number</label>
-                <input type="text" name="phone number" className="text"/>
+                <input type="text" name="number" className="text" value={values.number} onChange={change}/>
             </div>
             <div>
+                <label htmlFor="uploadkyc">Upload Kyc</label>
+                <input type="file" name="file" value={values.file} onChange={change}/>
+            </div>
+            {/* <div>
                 <label htmlFor="uploadkyc">Upload Kyc</label>
                 <input type="file" />
             </div>
             <div>
                 <label htmlFor="uploadkyc">Upload Kyc</label>
                 <input type="file" />
-            </div>
-            <div>
-                <label htmlFor="uploadkyc">Upload Kyc</label>
-                <input type="file" />
-            </div>
+            </div> */}
             <button>Submit my application</button>
         </form>
     </Wrapper>

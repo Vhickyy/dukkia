@@ -15,8 +15,8 @@ function App() {
           <Route path='/' element={<Products/>}/>
           <Route path='open-account' element={<Openaccount/>}/>
           <Route path='goldbars' element={<Goldbars/>}/>
-          <Route path='goldbars/buy/:id' element={<Singlegoldbar order='buy' />}/>
-          <Route path='goldbars/sell/:id' element={<Singlegoldbar order='sell'/>}/>
+          <Route path='goldbars/buy/:id' element={<Singlegoldbar order='Buy' />}/>
+          <Route path='goldbars/sell/:id' element={<Singlegoldbar order='Sell'/>}/>
           <Route path='poolallocated' element={<Poolallocated/>}/>
         </Routes>
       </Main>
