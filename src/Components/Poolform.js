@@ -74,14 +74,19 @@ const Poolform = () => {
         <label htmlFor="amount">Amount:</label>
         <input type="text" name="amount" id="amount" value={values.amount} readOnly onChange={change}/>
         </div>
-        {/* <div> */}
-            <p>Select order type</p>
-            <div>
-                <label htmlFor="buy">Buy</label>
-                <input type="radio" name="order" id="buy" />
-                <label htmlFor="sell">Sell</label>
-                <input type="radio" name="order" id="sell" />
+        <div>
+            {/* <p>Select order type</p> */}
+            <div className="radio">
+                <div className="rad">
+                    <label htmlFor="buy">Buy</label>
+                    <input type="radio" name="order" id="buy" />
+                </div>
+                <div className="rad">
+                    <label htmlFor="buy">Sell</label>
+                    <input type="radio" name="order" id="buy" />
+                </div>
             </div>
+        </div>
             <button>Place Order</button>
             
         {/* </div> */}
@@ -99,7 +104,7 @@ div{
     display: grid;
 }
 input{
-    width: 100%;
+    /* width: 100%; */
     padding: .4rem .5rem;
     border: 1px solid black;
     outline: none;
@@ -113,7 +118,21 @@ button{
   border: none;
   background-color: #244D91;
   color: #fff;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+}
+.radio{
+    display: flex;
+    /* background-color: blue; */
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+}
+.rad{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: green; */
+    width: 3rem;
 }
 `
 

@@ -38,6 +38,9 @@ margin: 0 auto;
   word-spacing: .1rem;
   padding: 1rem;
 }
+li{
+  margin-left: 1rem;
+}
 
 @media (min-width: 800px){
   .content{
