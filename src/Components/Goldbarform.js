@@ -40,18 +40,14 @@ display: grid;
 gap: .5rem;
 div{
     /* background-color: green; */
-    display: flex;
+    display: grid;
 }
 input{
-    width: 64%;
-}
-label{
-    /* background-color: blue; */
-    width: 150px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-right: .5rem;
+    width: 100%;
+    padding: .4rem .5rem;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 0.5rem;
 }
 button{
   width: 10rem;
@@ -62,11 +58,5 @@ button{
   background-color: #244D91;
   color: #fff;
   margin-top: 1rem;
-}
-@media (min-width: 970px){
-    label{
-        /* background-color: pink; */
-        width: 160px;
-    }
 }
 `

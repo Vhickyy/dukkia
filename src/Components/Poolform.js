@@ -92,25 +92,22 @@ const Poolform = () => {
 export default Poolform
 
 const Wrapper = styled.form`
+display: grid;
+gap: .5rem;
 div{
     /* background-color: green; */
-    display: flex;
+    display: grid;
 }
 input{
-    width: 64%;
-}
-label{
-    /* background-color: blue; */
-    /* width: 110px; */
-    width: 6.8rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-right: .5rem;
+    width: 100%;
+    padding: .4rem .5rem;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 0.5rem;
 }
 button{
   width: 10rem;
-  justify-self: center;
+  /* justify-self: center; */
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
