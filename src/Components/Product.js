@@ -17,7 +17,7 @@ const data = [
         name: 'Gold Coins',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell Gold Coins",
-        url: "goldbars"
+        url: "goldcoins"
     },
     {
         id:'3',

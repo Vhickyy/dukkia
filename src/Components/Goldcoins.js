@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import gold from '../Images/gold.jpg'
-import {data} from './Goldbardata'
+import {data} from './Goldcoinsdata'
 import { Link } from "react-router-dom"
-const Goldbars = () => {
+const Goldcoins = () => {
   return (
     <Wrapper>
         <div className="container">
@@ -10,13 +10,11 @@ const Goldbars = () => {
             return (
                 <div key={index} className="card">
                     <img src={gold} alt="" />
-                    <p>{item.amount > 1 ? `${item.amount}Grams` :  `${item.amount} Gram`} Philoro Gold Minted Bar of 999.9 fineness</p>
-                    <p>The {item.amount} Grams </p>
+                    <p>{item.name}</p>
                     <div className="btn">
                         <Link to={`buy/${item.id}`}><button className="buy">Buy</button></Link>
                         <Link to={`sell/${item.id}`}><button className="sell">Sell</button></Link>
                     </div>
-                    
                 </div>
             )
         })}
@@ -26,7 +24,7 @@ const Goldbars = () => {
   )
 }
 
-export default Goldbars
+export default Goldcoins
 
 const Wrapper = styled.main`
 padding: 4rem 0;
@@ -34,9 +32,12 @@ width: 85%;
 margin: 0 auto;
 .container{
     display: grid;
-    justify-content: center;
     grid-template-columns: repeat(auto-fit,minmax(17.5rem,1fr));
+    justify-content: center;
     gap: 3rem 2rem;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
 }
 img{
     width: 100%;
@@ -45,6 +46,7 @@ img{
 }
 .card{
     /* background-color: #fff; */
+    /* width: 22rem; */
     border-radius: .5rem;
     overflow: hidden;
     display: grid;
@@ -63,10 +65,10 @@ button{
     background-color: white;
 }
 @media (min-width: 785px){
-
     .container{
         /* background-color: pink; */
-        /* grid-template-columns: repeat(auto-fit,minmax(290px,1fr)); */
+        /* grid-template-columns: repeat(auto-fit,minmax(25rem,1fr)); */
     }
+    
 }
 `

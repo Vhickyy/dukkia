@@ -6,7 +6,8 @@ import Openaccount from './Components/Openaccount';
 import Goldbars from './Components/Goldbars';
 import Singlegoldbar from './Components/Singlegoldbar';
 import Poolallocated from './Components/Poolallocated';
-
+import Goldcoins from './Components/Goldcoins';
+import Singlecoin from './Components/Singlecoin';
 function App() {
   return (
     <Layout>
@@ -18,6 +19,9 @@ function App() {
           <Route path='goldbars/buy/:id' element={<Singlegoldbar order='Buy' />}/>
           <Route path='goldbars/sell/:id' element={<Singlegoldbar order='Sell'/>}/>
           <Route path='poolallocated' element={<Poolallocated/>}/>
+          <Route path='goldcoins' element={<Goldcoins/>}/>
+          <Route path='goldcoins/buy/:id' element={<Singlecoin order='Buy' />}/>
+          <Route path='goldcoins/sell/:id' element={<Singlecoin order='Sell'/>}/>
         </Routes>
       </Main>
     </Layout>

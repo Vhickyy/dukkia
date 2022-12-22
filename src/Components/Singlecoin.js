@@ -1,11 +1,10 @@
 import styled from "styled-components"
 import gold from '../Images/gold.jpg'
 import { useParams } from 'react-router-dom'
-import {data} from './Goldbardata'
+import {data} from './Goldcoinsdata'
 import Specification from "./Specification"
-import ProductDescription from "./GoldbarProductDescription"
 import Goldbarform from "./Goldbarform"
-const Singlegoldbar = ({order}) => {
+const Singlecoin = ({order}) => {
   const {id} = useParams()
   const oneItem = data.find(item=> item.id.toString() === id)
   console.log(oneItem);
@@ -35,8 +34,19 @@ const Singlegoldbar = ({order}) => {
         </div>
       </div>
       
-      <div>
-        <ProductDescription/>
+      <div className="product">
+        <h3>Product description</h3>
+        {data.map(item=>{
+            return (
+                <>
+                <p key={item.id}>{item.desc}</p>
+                </>
+            )
+        })
+        }
+        {/* <p>{item.desc}</p> */}
+        <p>The gold coin is VAT free if the secure storage option with Brink's is opted for. Storage fee is free for the first 12 months of storage. Your specific numbered gold bar will be fully allocated to you in your name and segregated within the vault.</p>
+        <p>All shipping costs is inclusive of handling, protective packaging, insurance, and VAT. The cost of shipping to your preferred location will be advised upon request.</p>
       </div>
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
@@ -48,7 +58,7 @@ const Singlegoldbar = ({order}) => {
   )
 }
 
-export default Singlegoldbar
+export default Singlecoin
 
 const Wrapper = styled.main`
 padding: 3rem 0;
@@ -91,6 +101,10 @@ h3{
 .ins{
   display: grid;
   gap: 1rem;
+}
+.product{
+    display: grid;
+    gap: 1rem;
 }
 @media (min-width: 850px){
   gap: 2rem;
