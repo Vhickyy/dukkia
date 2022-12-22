@@ -40,7 +40,7 @@ margin: 0 auto;
 }
 img{
     width: 100%;
-    height: 21rem;
+    height: 19rem;
     /* border-radius: .5rem; */
 }
 .card{
