@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import gold from '../Images/gold.jpg'
 import {data} from './Goldcoinsdata'
 import { Link } from "react-router-dom"
 const Goldcoins = () => {
@@ -9,7 +8,7 @@ const Goldcoins = () => {
             {data.map((item,index)=>{
             return (
                 <div key={index} className="card">
-                    <img src={gold} alt="" />
+                    <img src='../Images/gold.jpg' alt="" />
                     <p>{item.name}</p>
                     <div className="btn">
                         <Link to={`buy/${item.id}`}><button className="buy">Buy</button></Link>

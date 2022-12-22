@@ -7,7 +7,6 @@ import Goldbarform from "./Goldbarform"
 const Singlecoin = ({order}) => {
   const {id} = useParams()
   const oneItem = data.find(item=> item.id.toString() === id)
-  console.log(oneItem);
   return (
     <Wrapper>
       {/* {order}
@@ -36,15 +35,7 @@ const Singlecoin = ({order}) => {
       
       <div className="product">
         <h3>Product description</h3>
-        {data.map(item=>{
-            return (
-                <>
-                <p key={item.id}>{item.desc}</p>
-                </>
-            )
-        })
-        }
-        {/* <p>{item.desc}</p> */}
+        <p>{oneItem.desc}</p>
         <p>The gold coin is VAT free if the secure storage option with Brink's is opted for. Storage fee is free for the first 12 months of storage. Your specific numbered gold bar will be fully allocated to you in your name and segregated within the vault.</p>
         <p>All shipping costs is inclusive of handling, protective packaging, insurance, and VAT. The cost of shipping to your preferred location will be advised upon request.</p>
       </div>

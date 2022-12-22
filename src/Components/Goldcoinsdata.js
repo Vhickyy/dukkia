@@ -8,7 +8,8 @@ export const data = [
         Weight: 31.1,
         FineWeight: 1.00,
         Fineness: 999.9,
-        Grade: "New"
+        Grade: "New",
+        img: '../Images/gold.jpg'
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ export const data = [
         Weight: 31.1,
         FineWeight: 1.00,
         Fineness: 999.9,
-        Grade: "New"
+        Grade: "New",
+        img: '../Images/gold.jpg'
     },
     {
         id: 3,
@@ -31,6 +33,7 @@ export const data = [
         FineWeight: 1.00,
         Fineness: 999.9,
         Grade: "New",
+        img: '../Images/gold.jpg'
     },
     {
         id: 4,
@@ -42,6 +45,7 @@ export const data = [
         FineWeight: 1.00,
         Fineness: 916.7,
         Grade: "New",
+        img: '../Images/gold.jpg'
     },
     {
         id: 5,
@@ -53,5 +57,6 @@ export const data = [
         FineWeight: 7.32 ,
         Fineness: 916.7,
         Grade: "New",
+        img: '../Images/gold.jpg'
     },
 ]
