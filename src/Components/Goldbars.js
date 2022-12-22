@@ -9,7 +9,7 @@ const Goldbars = () => {
             {data.map((item,index)=>{
             return (
                 <div key={index} className="card">
-                    <img src={gold} alt="" />
+                    <img src={item.img} alt="" />
                     <p>{item.amount > 1 ? `${item.amount}Grams` :  `${item.amount} Gram`} Philoro Gold Minted Bar of 999.9 fineness</p>
                     <p>The {item.amount} Grams </p>
                     <div className="btn">
@@ -41,7 +41,7 @@ margin: 0 auto;
 img{
     width: 100%;
     height: 21rem;
-    border-radius: .5rem;
+    /* border-radius: .5rem; */
 }
 .card{
     /* background-color: #fff; */
@@ -50,7 +50,7 @@ img{
     display: grid;
     gap: 1rem;
     padding: 2rem 2rem;
-    background-color: whitesmoke;
+    background-color: white;
     box-shadow: 5px 3px 5px gray, -5px -3px 7px rgba(100,100,100,.3);
 }
 button{
