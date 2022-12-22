@@ -8,7 +8,7 @@ const Goldcoins = () => {
             {data.map((item,index)=>{
             return (
                 <div key={index} className="card">
-                    <img src='../Images/gold.jpg' alt="" />
+                    <img src={item.img} alt="" />
                     <p>{item.name}</p>
                     <div className="btn">
                         <Link to={`buy/${item.id}`}><button className="buy">Buy</button></Link>
@@ -51,7 +51,7 @@ img{
     display: grid;
     gap: 1rem;
     padding: 2rem 2rem;
-    background-color: whitesmoke;
+    background-color: white;
     box-shadow: 5px 3px 5px gray, -5px -3px 7px rgba(100,100,100,.3);
 }
 button{
