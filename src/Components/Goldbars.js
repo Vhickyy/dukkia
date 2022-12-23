@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import gold from '../Images/gold.jpg'
 import {data} from './Goldbardata'
 import { Link } from "react-router-dom"
+import gold from '../Images/gold.jpg'
 const Goldbars = () => {
   return (
     <Wrapper>
@@ -10,8 +10,7 @@ const Goldbars = () => {
             return (
                 <div key={index} className="card">
                     <img src={item.img} alt="" />
-                    <p>{item.amount > 1 ? `${item.amount}Grams` :  `${item.amount} Gram`} Philoro Gold Minted Bar of 999.9 fineness</p>
-                    <p>The {item.amount} Grams </p>
+                    <p>{item.name} of 999.9 fineness</p>
                     <div className="btn">
                         <Link to={`buy/${item.id}`}><button className="buy">Buy</button></Link>
                         <Link to={`sell/${item.id}`}><button className="sell">Sell</button></Link>
@@ -40,7 +39,7 @@ margin: 0 auto;
 }
 img{
     width: 100%;
-    height: 16rem;
+    height: 19rem;
     /* border-radius: .5rem; */
 }
 .card{

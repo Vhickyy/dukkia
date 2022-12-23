@@ -34,18 +34,15 @@ margin: 0 auto;
     grid-template-columns: repeat(auto-fit,minmax(17.5rem,1fr));
     justify-content: center;
     gap: 3rem 2rem;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
 }
 img{
     width: 100%;
-    height: 21rem;
+    height: 19rem;
     border-radius: .5rem;
+    object-fit: contain;
 }
 .card{
     /* background-color: #fff; */
-    /* width: 22rem; */
     border-radius: .5rem;
     overflow: hidden;
     display: grid;
@@ -62,12 +59,5 @@ button{
     margin-right: 1rem;
     color: black;
     background-color: white;
-}
-@media (min-width: 785px){
-    .container{
-        /* background-color: pink; */
-        /* grid-template-columns: repeat(auto-fit,minmax(25rem,1fr)); */
-    }
-    
 }
 `

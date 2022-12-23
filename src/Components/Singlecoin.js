@@ -16,7 +16,7 @@ const Singlecoin = ({order}) => {
       <div className="image-container">
         <div className="ins">
           <div className="image">
-          <img src={gold} alt="" />
+          <img src={oneItem.img} alt="" />
           </div>
           <div className="first">
           <p>The {oneItem.amount} Grams minted gold bar from Philoro is a 999.9 fine gold with a high-lustre finish and rounded edges</p>
@@ -28,7 +28,7 @@ const Singlecoin = ({order}) => {
          <p>{order} order</p>
          <p>Name: {}</p>
           <div>
-            <Goldbarform/>
+            <Goldbarform order={order} name={oneItem.name}/>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ const Singlecoin = ({order}) => {
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
         <p>{order} order</p>
-        <Goldbarform order={order}/>
+        <Goldbarform order={order} name={oneItem.name}/>
       </div>
       
     </Wrapper>

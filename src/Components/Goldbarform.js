@@ -1,14 +1,43 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const Goldbarform = ({order}) => {
+const Goldbarform = ({order,name}) => {
     const [values,setValues] = useState({email:"",number:"",goldaccount:'',quantity:"",order:order})
+    const [error, setError] = useState({})
     const change = (e)=>{
         const {name,value} = e.target
         setValues({...values,[name]:value})
     }
-    const submit = ()=>{
-        console.log('i');
+    const submit = (e)=>{
+      e.preventDefault()
+      setError(validate(values))
+      if(Object.keys(error).length === 0){
+        const send = {...values,order:order,name}
+      }else{
+        console.log("There is an error");
+      }
+    }
+    
+    const validate = (value) =>{
+      let error = {}
+      const phoneregex1 = /^0-9{11}$/
+      if(!value.email){
+        error.email = "field is required";
+      }
+      if(!value.number){
+        error.number = "field is required";
+      }
+      if(!value.goldaccount){
+        error.goldaccount = "field is required";
+      }else if(!Number(value.goldaccount)){
+        error.goldaccount = "Invalid gold trading account"
+      }
+      if(!value.quantity){
+        error.quantity = "field is required";
+      }else if(!Number(value.quantity)){
+        error.quantity = "Enter a number"
+      }
+      return error;
     }
   return (
     <Wrapper onSubmit={submit}>

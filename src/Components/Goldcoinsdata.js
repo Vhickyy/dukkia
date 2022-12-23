@@ -9,7 +9,7 @@ export const data = [
         FineWeight: 1.00,
         Fineness: 999.9,
         Grade: "New",
-        img: '../Images/philharmonic.JPG'
+        img: '/Images/philharmonic.JPG'
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const data = [
         FineWeight: 1.00,
         Fineness: 999.9,
         Grade: "New",
-        img: '../Images/goldmaple.JPG'
+        img: '/Images/goldmaple.JPG'
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ export const data = [
         FineWeight: 1.00,
         Fineness: 999.9,
         Grade: "New",
-        img: '../Images/britannia.JPG'
+        img: '/Images/britannia.JPG'
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ export const data = [
         FineWeight: 1.00,
         Fineness: 916.7,
         Grade: "New",
-        img: '../Images/krugger.JPG'
+        img: '/Images/krugger.JPG'
     },
     {
         id: 5,
@@ -57,6 +57,6 @@ export const data = [
         FineWeight: 7.32 ,
         Fineness: 916.7,
         Grade: "New",
-        img: '../Images/sovereign.JPG'
+        img: '/Images/sovereign.JPG'
     },
 ]

@@ -7,8 +7,7 @@ import ProductDescription from "./GoldbarProductDescription"
 import Goldbarform from "./Goldbarform"
 const Singlegoldbar = ({order}) => {
   const {id} = useParams()
-  const oneItem = data.find(item=> item.id.toString() === id)
-  console.log(oneItem);
+  const oneItem = data.find(item=> item.id.toString() === id);
   return (
     <Wrapper>
       {/* {order}
@@ -18,7 +17,7 @@ const Singlegoldbar = ({order}) => {
       <div className="image-container">
         <div className="ins">
           <div className="image">
-          <img src={gold} alt="" />
+          <img src={oneItem.img} alt="" />
           </div>
           <div className="first">
           <p>The {oneItem.amount} Grams minted gold bar from Philoro is a 999.9 fine gold with a high-lustre finish and rounded edges</p>
@@ -28,20 +27,21 @@ const Singlegoldbar = ({order}) => {
         <div className="spec1">
          <Specification amount={oneItem.amount}/>
          <p>{order} order</p>
-         <p>Name: {}</p>
+         <p>Name: {oneItem.name}</p>
           <div>
-            <Goldbarform/>
+            <Goldbarform order={order} name={oneItem.name}/>
           </div>
         </div>
       </div>
       
-      <div>
+      <div className="product">
         <ProductDescription/>
       </div>
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
         <p>{order} order</p>
-        <Goldbarform order={order}/>
+        <p>Name: {oneItem.name}</p>
+        <Goldbarform order={order} name={oneItem.name}/>
       </div>
       
     </Wrapper>
@@ -89,6 +89,10 @@ h3{
     margin-bottom: .5rem;
 }
 .ins{
+  display: grid;
+  gap: 1rem;
+}
+.product{
   display: grid;
   gap: 1rem;
 }

@@ -1,37 +1,44 @@
 export const data = [
     {
         id: 1,
-        amount: 1,
-        img: '../Images/1gram.JPG'
+        amount:1,
+        name: "1g Philoro Gold Minted Bar",
+        img: '/Images/1gram.JPG'
     },
     {
         id: 2,
-        amount: 10,
-        img: '../Images/10gram.JPG'
+        amount:10,
+        name: "10g Philoro Gold Minted Bar",
+        img: '/Images/10gram.JPG'
     },
     {
         id: 3,
-        amount: 20,
+        amount:20,
+        name: "20g Philoro Gold Minted Bar",
         img: '../Images/10gram.JPG'
     },
     {
         id: 4,
-        amount: 50,
-        img: '../Images/50gram.JPG'
+        amount:50,
+        name: "50g Philoro Gold Minted Bar",
+        img: '/Images/50gram.JPG'
     },
     {
         id: 5,
-        amount: 100,
-        img: '../Images/100gram.JPG'
+        amount:100,
+        name: "100g Philoro Gold Minted Bar",
+        img: '/Images/100gram.JPG'
     },
     {
         id: 6,
-        amount: 500,
-        img: '../Images/500gram.JPG'
+        amount:500,
+        name: "500g Philoro Gold Minted Bar",
+        img: '/Images/500gram.JPG'
     },
     {
         id: 7,
         amount: 1000,
-        img: '../Images/1kggold.JPG'
+        name: "1000g Philoro Gold Minted Bar",
+        img: '/Images/1kggold.JPG'
     }
 ]
