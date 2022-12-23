@@ -6,6 +6,9 @@ const Goldbarform = ({order,name}) => {
     const [error, setError] = useState({})
     const change = (e)=>{
         const {name,value} = e.target
+        const newerr = {...error}
+        delete newerr[name]
+        setError(newerr)
         setValues({...values,[name]:value})
     }
     const submit = (e)=>{
@@ -17,7 +20,7 @@ const Goldbarform = ({order,name}) => {
         console.log("There is an error");
       }
     }
-    
+
     const validate = (value) =>{
       let error = {}
       const phoneregex1 = /^0-9{11}$/
@@ -44,18 +47,22 @@ const Goldbarform = ({order,name}) => {
         <div>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name='email' value={values.email} onChange={change}/>
+        {error.email && <p style={{color:"red"}}>{error.email}</p>}
         </div>
         <div>
         <label htmlFor="number">Phone number:</label>
         <input type="text" id="number" name='number' value={values.number} onChange={change}/>
+        {error.number && <p style={{color:"red"}}>{error.number}</p>}
         </div>
         <div>
         <label htmlFor="goldaccount">Gold account:</label>
         <input type="text" id="goldaccount" name='goldaccount' value={values.goldaccount} onChange={change} />
+        {error.goldaccount && <p style={{color:"red"}}>{error.goldaccount}</p>}
         </div>
         <div>
         <label htmlFor="quantity">Quantity:</label>
         <input type="text" id="quantity" name='quantity' value={values.quantity} onChange={change}/>
+        {error.quantity && <p style={{color:"red"}}>{error.quantity}</p>}
         </div>
         <button>Place Order</button>
     </Wrapper>
