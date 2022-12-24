@@ -2,7 +2,7 @@ import { useState } from "react"
 import styled from "styled-components"
 
 const Form = ({accType}) => {
-    const [values,setValues] = useState({name:"",email:"",number:"",file:""})
+    const [values,setValues] = useState({firstname:"",middlename:"",lastname:"",email:"",number:"",file:""})
     const change = (e)=>{
         const {name,value} = e.target
         setValues({...values,[name]:value})
@@ -11,8 +11,16 @@ const Form = ({accType}) => {
     <Wrapper>
         <form>
             <div >
-                <label htmlFor="name">Name</label>
-                <input type="text" className="text" name="name" value={values.name} onChange={change}/>
+                <label htmlFor="name">First Name:</label>
+                <input type="text" className="text" name="name" value={values.firstname} onChange={change}/>
+            </div>
+            <div >
+                <label htmlFor="name">Middle Name:</label>
+                <input type="text" className="text" name="name" value={values.middlename} onChange={change}/>
+            </div>
+            <div >
+                <label htmlFor="name">Last Name:</label>
+                <input type="text" className="text" name="name" value={values.lastname} onChange={change}/>
             </div>
             <div >
                 <label htmlFor="email">Email</label>
@@ -22,7 +30,7 @@ const Form = ({accType}) => {
                 <label htmlFor="phone number">Phone Number</label>
                 <input type="text" name="number" className="text" value={values.number} onChange={change}/>
             </div>
-            <div>
+            {/* <div>
                 <label htmlFor="uploadkyc">Upload Kyc</label>
                 <input type="file" name="file" value={values.file} onChange={change}/>
             </div>
@@ -36,7 +44,7 @@ const Form = ({accType}) => {
                 <label htmlFor="uploadkyc">Upload CAC</label>
                 <input type="file" />
             </div>
-            </> }
+            </> } */}
             <button>Submit my application</button>
         </form>
     </Wrapper>
