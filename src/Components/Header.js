@@ -8,16 +8,15 @@ const Header = () => {
             <div className='top-nav'>
                 <div className='container flex-nav'>
                     <div className='top'>
-                        <h4>Buy Gold</h4>
-                        <p>$432.43/oz</p>
+                        <h4>Buy</h4>
+                        <p className='top-p'>$432.43/oz</p>
                     </div>
-                    <FaBars size='40' className='mobile'/>
+                    <FaBars className="icon mobile" />
                     <div className='desktop'>
                         <div className='top-input'>
-                            <input type="text"/>
-                            <FaSearch size='2rem' />
+                            <input type="text" placeholder='Search'/>
+                            <FaSearch className='icon' />
                         </div>
-                        <h2>FAQ</h2>
                         <Link to={'/open-account'}><button>Open Account</button></Link>
                           
                     </div>
@@ -26,7 +25,7 @@ const Header = () => {
             <div className='end-nav'>
                 <div className='container flex-nav'>
                     <h1>LOGO</h1>
-                    <h3>Shop</h3>
+                    <p>Shop</p>
                 </div>
             </div>
         </nav>
@@ -39,12 +38,17 @@ export default Header
 
 const Wrapper = styled.header`
     nav{
-        background-color: pink;
+    }
+    p{
+        font-size: 15px;
     }
     .top-nav{
         width: 100%;
         background-color: #fff;
         /* background-color: yellow; */
+    }
+    .top-p{
+        color: #A69145;
     }
     .end-nav{
         width: 100%;
@@ -53,9 +57,8 @@ const Wrapper = styled.header`
     .container{
         width: 85%;
         /* background-color: brown; */
-        /* max-width: 550px; */
         margin: 0 auto;
-        height: 4rem;
+        height: 3rem;
     }
     .flex-nav{
     display: flex;
@@ -86,10 +89,12 @@ const Wrapper = styled.header`
     input{
         width: 90%;
         border: none;
-        padding: 0.5rem;
+        padding: 0 0.5rem;
         /* background-color: yellow; */
         font-size: larger;
-        background-color: gray;
+        border-radius: .5rem;
+        border-bottom: 1px solid #A69145;
+        /* background-color: gray; */
     }
     h2{
         text-align: center;
@@ -104,7 +109,12 @@ const Wrapper = styled.header`
     color: white;
     font-size: 1rem;
     text-transform: capitalize;
-}
+    }
+    .icon{
+        color: #A69145;
+        height: 2rem;
+        width: 1.5rem;
+    }
     @media (min-width:970px){
         .mobile{
             display: none;
@@ -112,7 +122,7 @@ const Wrapper = styled.header`
         .desktop{
             /* width: 70%; */
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             align-items: center;
             column-gap: 2rem;
             /* background-color: yellow; */

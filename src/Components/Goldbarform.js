@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 
 const Goldbarform = ({order,name}) => {
-    const [values,setValues] = useState({email:"",number:"",goldaccount:'',quantity:"",order:order})
+    const [values,setValues] = useState({firstname:"",middlename:"",lastname:"",email:"",number:"",goldaccount:'',quantity:"",order:order})
     const [error, setError] = useState({})
     const change = (e)=>{
         const {name,value} = e.target
@@ -53,6 +53,21 @@ const Goldbarform = ({order,name}) => {
     }
   return (
     <Wrapper onSubmit={submit}>
+        <div>
+        <label htmlFor="firstname">First Name:</label>
+        <input type="firstname" id="firstname" name='firstname' value={values.firstname} onChange={change}/>
+        {error.firstname && <p style={{color:"red"}}>{error.firstname}</p>}
+        </div>
+        <div>
+        <label htmlFor="middlename">Middle Name:</label>
+        <input type="middlename" id="middlename" name='middlename' value={values.middlename} onChange={change}/>
+        {error.middlename && <p style={{color:"red"}}>{error.middlename}</p>}
+        </div>
+        <div>
+        <label htmlFor="lastname">Last Name:</label>
+        <input type="lastname" id="lastname" name='lastname' value={values.lastname} onChange={change}/>
+        {error.lastname && <p style={{color:"red"}}>{error.lastname}</p>}
+        </div>
         <div>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name='email' value={values.email} onChange={change}/>

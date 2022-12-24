@@ -13,8 +13,8 @@ const Layout = ({children}) => {
 export default Layout
 
 const Footer = styled.footer`
-background-color: #244D91;
+background-color: #322F2F;
 text-align: center;
 padding: 1rem 0;
-color: white;
+color: #746A44;
 `

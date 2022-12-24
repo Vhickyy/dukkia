@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useState } from "react"
 const Poolform = () => {
-    const [values,setValues] = useState({name:'',email:'',goldaccount:'',product:"Dukkia gold pool", quantity:'',amount:"",order:""})
+    const [values,setValues] = useState({firstname:'',middlename:"",lastname:"",email:'',goldaccount:'',product:"Dukkia gold pool", quantity:'',amount:"",order:""})
     const change = (e)=>{
         const {name,value} = e.target
         const weBuy= (number)=>{
@@ -51,8 +51,16 @@ const Poolform = () => {
   return (
     <Wrapper>
         <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" name="name" id="name" value={values.name} onChange={change}/>
+        <label htmlFor="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname" value={values.firstname} onChange={change}/>
+        </div>
+        <div>
+        <label htmlFor="middlename">Middle Name:</label>
+        <input type="text" name="middlename" id="middlename" value={values.middlename} onChange={change}/>
+        </div>
+        <div>
+        <label htmlFor="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname" value={values.lastname} onChange={change}/>
         </div>
         <div>
         <label htmlFor="email">Email:</label>
