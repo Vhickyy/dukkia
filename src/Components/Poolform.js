@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useState } from "react"
 const Poolform = () => {
-    const [values,setValues] = useState({name:'',email:'',goldaccount:'',product:"Dukkia gold pool", quantity:'',amount:""})
+    const [values,setValues] = useState({name:'',email:'',goldaccount:'',product:"Dukkia gold pool", quantity:'',amount:"",order:""})
     const change = (e)=>{
         const {name,value} = e.target
         const weBuy= (number)=>{
@@ -79,11 +79,11 @@ const Poolform = () => {
             <div className="radio">
                 <div className="rad">
                     <label htmlFor="buy">Buy</label>
-                    <input type="radio" name="order" id="buy" />
+                    <input type="radio" name="order" id="buy" value="buy" onChange={(e)=>setValues({...values,order:e.target.value})}/>
                 </div>
                 <div className="rad">
-                    <label htmlFor="buy">Sell</label>
-                    <input type="radio" name="order" id="buy" />
+                    <label htmlFor="sell">Sell</label>
+                    <input type="radio" name="order" id="sell" value="sell" onChange={(e)=>setValues({...values,order:e.target.value})}/>
                 </div>
             </div>
         </div>

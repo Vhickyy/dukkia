@@ -1,12 +1,11 @@
 import styled from "styled-components"
 
-const Instruction = () => {
+const Instruction = ({accType,setAccType}) => {
   return (
     <Wrapper>
-            <select name="" id="">
-                <option value="">Individual</option>
-                <option value="">Coperate</option>
-                <option value="">Individual</option>
+            <select name="" id="" value={accType} onChange={(e)=>setAccType(e.target.value)}>
+                <option value="individual">Individual</option>
+                <option value="corperate">Corperate</option>
             </select>
             {/* <div > */}
                 <h2>Instruction</h2>

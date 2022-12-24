@@ -1,7 +1,7 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-const Form = () => {
+const Form = ({accType}) => {
     const [values,setValues] = useState({name:"",email:"",number:"",file:""})
     const change = (e)=>{
         const {name,value} = e.target
@@ -26,14 +26,17 @@ const Form = () => {
                 <label htmlFor="uploadkyc">Upload Kyc</label>
                 <input type="file" name="file" value={values.file} onChange={change}/>
             </div>
-            {/* <div>
-                <label htmlFor="uploadkyc">Upload Kyc</label>
+            {accType === "corperate" && 
+            <>
+                <div>
+                <label htmlFor="uploadkyc">Upload Id</label>
                 <input type="file" />
             </div>
             <div>
-                <label htmlFor="uploadkyc">Upload Kyc</label>
+                <label htmlFor="uploadkyc">Upload CAC</label>
                 <input type="file" />
-            </div> */}
+            </div>
+            </> }
             <button>Submit my application</button>
         </form>
     </Wrapper>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const Goldbarform = ({order,name}) => {
     const [values,setValues] = useState({email:"",number:"",goldaccount:'',quantity:"",order:order})
@@ -11,16 +12,24 @@ const Goldbarform = ({order,name}) => {
         setError(newerr)
         setValues({...values,[name]:value})
     }
-    const submit = (e)=>{
+    const submit = async (e)=>{
       e.preventDefault()
       setError(validate(values))
+      // console.log(Object.keys(error));
       if(Object.keys(error).length === 0){
         const send = {...values,order:order,name}
+        // try {
+        //   const res = await axios.post("http://stage.dukiapreciousmetals.co/api/post_notification.php", send);
+        //   console.log(res.data());
+        // } catch (error) {
+        //   console.log(error);
+        // }
+        
       }else{
         console.log("There is an error");
       }
     }
-
+    // const res = axios.post("http://stage.dukiapreciousmetals.co/api/post_notification.php")
     const validate = (value) =>{
       let error = {}
       const phoneregex1 = /^0-9{11}$/

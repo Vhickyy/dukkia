@@ -1,12 +1,14 @@
 import Form from "./Form"
 import styled from "styled-components"
 import Instruction from "./Instruction"
+import { useState } from "react"
 const Openaccount = () => {
+  const [accType,setAccType] = useState("individual")
   return (
     <Wrapper>
         <div className="container">
-            <Instruction/>
-            <Form/>
+            <Instruction accType={accType} setAccType={setAccType}/>
+            <Form accType={accType}/>
         </div>
         
     </Wrapper>
