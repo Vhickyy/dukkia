@@ -8,7 +8,20 @@ import Singlegoldbar from './Components/Singlegoldbar';
 import Poolallocated from './Components/Poolallocated';
 import Goldcoins from './Components/Goldcoins';
 import Singlecoin from './Components/Singlecoin';
+import axios from 'axios';
+import { useEffect } from 'react';
 function App() {
+  // const register = async() =>{
+  //   try {
+  //     const {data} = await axios.post("/api/users/create",{first_name:"John",last_name:"Doe",email:"dukia@gmail.com",password:"dukia"})
+  //     console.log(data);
+  //     console.log("hi");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+    
+  // }
+  // register()
   return (
     <Layout>
       <Main>
