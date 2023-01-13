@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const data = [
     {
         id:'1',
-        img: '../Images/gold.jpg',
+        img: '/Images/bgimg.jpg',
         name: 'Gold Bar',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell Gold Bars",
@@ -13,7 +13,7 @@ const data = [
     },
     {
         id:'2',
-        img: '../Images/gold.jpg',
+        img: '/Images/bgimg.jpg',
         name: 'Gold Coins',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell Gold Coins",
@@ -21,7 +21,7 @@ const data = [
     },
     {
         id:'3',
-        img: '../Images/gold.jpg',
+        img: '/Images/bgimg.jpg',
         name: 'Pool Allocated',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell X Qty",

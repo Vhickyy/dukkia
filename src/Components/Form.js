@@ -7,6 +7,9 @@ const Form = ({accType}) => {
         const {name,value} = e.target
         setValues({...values,[name]:value})
     }
+    // const submit = ()=>{
+    //     const {data} 
+    // }
   return (
     <Wrapper>
         <form>
@@ -59,6 +62,7 @@ width: 85%;
 form{
     display: flex;
     flex-direction: column;
+    max-width:100%
     /* display: grid;
     gap: 1rem; */
 }
