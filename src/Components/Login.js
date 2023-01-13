@@ -19,8 +19,8 @@ const formik = useFormik({
         const login = async ()=>{
             try {
                  const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/auth/login",values,{headers:{"Content-Type":"application/x-www-form-urlencoded"}});
-                //  <Navigate to={'/dashboard'} element={<Dashboard/>}/>
                 navigate('/dashboard')
+                localStorage.setItem('token',JSON.stringify(data.data))
                 console.log(data);
             } catch (error) {
                 console.log(error);

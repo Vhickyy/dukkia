@@ -1,55 +1,88 @@
 import { useState } from "react"
 import styled from "styled-components"
+import { useFormik } from "formik"
+import * as Yup from 'yup'
+import axios from "axios"
+import { Link, useNavigate } from "react-router-dom"
 
 const Form = ({accType}) => {
-    const [values,setValues] = useState({firstname:"",middlename:"",lastname:"",email:"",number:"",file:""})
-    const change = (e)=>{
-        const {name,value} = e.target
-        setValues({...values,[name]:value})
-    }
-    // const submit = ()=>{
-    //     const {data} 
-    // }
+    const navigate = useNavigate()
+    const validationSchema = Yup.object({
+    email: Yup.string().email('Invalid email format').required("Required"),
+    password: Yup.string().required("Required"),
+    first_name: Yup.string().required("Required"),
+    last_name: Yup.string().required("Required"),
+    middle_name: Yup.string().required("Required"),
+    phone: Yup.string().required("Required"),
+})
+const formik = useFormik({
+    initialValues:{
+        email:"",
+        password:"",
+        first_name:"",
+        middle_name:"",
+        last_name:"",
+        phone:""
+    },
+    onSubmit: values => {
+        const register = async ()=>{
+            const token = JSON.parse(localStorage.getItem('token'))
+            try {
+                  const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/users",values,{headers:{"Content-Type":"application/x-www-form-urlencoded",
+                 "Authorization":`Bearer ${token}`}})
+                navigate('/verification')
+                console.log(data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        register()
+    },
+    validationSchema
+})
+// console.log(formik.values);
   return (
     <Wrapper>
-        <form>
+        <form onSubmit={formik.handleSubmit}>
             <div >
-                <label htmlFor="name">First Name:</label>
-                <input type="text" className="text" name="name" value={values.firstname} onChange={change}/>
+                <label htmlFor="firstname">First Name:</label>
+                <input type="text" className="text" name="first_name" id="firstname" value={formik.values.first_name} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.first_name && formik.errors.first_name && <p className="error">{formik.errors.first_name}</p>}
             </div>
             <div >
-                <label htmlFor="name">Middle Name:</label>
-                <input type="text" className="text" name="name" value={values.middlename} onChange={change}/>
+                <label htmlFor="lastname">Last Name:</label>
+                <input type="text" id="lastname" className="text" name="last_name" value={formik.values.middlename} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.last_name && formik.errors.last_name && <p className="error">{formik.errors.last_name}</p>}
             </div>
             <div >
-                <label htmlFor="name">Last Name:</label>
-                <input type="text" className="text" name="name" value={values.lastname} onChange={change}/>
+                <label htmlFor="middlename">Middle Name:</label>
+                <input type="text" className="text" id="middlename" name="middle_name" value={formik.values.lastname} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.middle_name && formik.errors.middle_name && <p className="error">{formik.errors.middle_name}</p>}
             </div>
             <div >
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" className="text" value={values.email} onChange={change}/>
+                <input type="email" name="email" id="email"  className="text" value={formik.values.email} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.email && formik.errors.email && <p className="error">{formik.errors.email}</p>}
             </div>
             <div >
-                <label htmlFor="phone number">Phone Number</label>
-                <input type="text" name="number" className="text" value={values.number} onChange={change}/>
+                <label htmlFor="password">Password</label>
+                <input type="password" name="password" id="password"  className="text" value={formik.values.password} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.email && formik.errors.password && <p className="error">{formik.errors.password}</p>}
             </div>
-            {/* <div>
-                <label htmlFor="uploadkyc">Upload Kyc</label>
-                <input type="file" name="file" value={values.file} onChange={change}/>
+            <div >
+                <label htmlFor="phonenumber">Phone Number</label>
+                <input type="text" name="phone" id="phonenumber" className="text" value={formik.values.phone} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.phone && formik.errors.phone && <p className="error">{formik.errors.phone}</p>}
             </div>
-            {accType === "corperate" && 
-            <>
-                <div>
-                <label htmlFor="uploadkyc">Upload Id</label>
-                <input type="file" />
-            </div>
-            <div>
-                <label htmlFor="uploadkyc">Upload CAC</label>
-                <input type="file" />
-            </div>
-            </> } */}
-            <button>Submit my application</button>
+            <button type="submit">Submit my application</button>
         </form>
+        <p>Already have an account?<Link to={'/login'}>Log in</Link></p>
     </Wrapper>
   )
 }
@@ -95,5 +128,8 @@ button{
     background-color: #244D91;
     color: #fff;
     flex-grow: 1;
+}
+.error{
+    color: red;
 }
 `
