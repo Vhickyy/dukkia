@@ -11,6 +11,8 @@ import Singlecoin from './Components/Singlecoin';
 import axios from 'axios';
 import Login from './Components/Login'
 import { useEffect } from 'react';
+import Dashboard from './Components/Dashboard';
+import Verfication from './Components/Verfication';
 function App() {
   const register = async() =>{
     try {
@@ -24,7 +26,7 @@ function App() {
     }
   }
   
-  // eyJ0eXAiOiJKV1QiLCJhbGciOiJzaGEyNTYifQ.eyJzdWIiOjUsImV4cCI6MTY3MzU3MzE4N30.VTcwV1ROalV5dWptZm9yQlQ5Zy1rTk5hUnFudmkwOG1kZW0xZk96d0ZUVQ
+  
   useEffect(()=>{
     register()
   },[])
@@ -38,6 +40,8 @@ function App() {
           <Route path='open-account' element={<Openaccount/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='goldbars/buy/:id' element={<Singlegoldbar order='Buy' />}/>
+          <Route path='verification' element={<Verfication/>}/>
+          <Route path='dashboard' element={<Dashboard/>}/>
           <Route path='goldbars/sell/:id' element={<Singlegoldbar order='Sell'/>}/>
           <Route path='poolallocated' element={<Poolallocated/>}/>
           <Route path='goldcoins' element={<Goldcoins/>}/>

@@ -2,7 +2,10 @@ import styled from "styled-components"
 import { useFormik } from "formik"
 import axios from "axios"
 import * as Yup from 'yup'
+import { Navigate, useNavigate } from "react-router-dom"
+import Dashboard from "./Dashboard"
 const Login = () => {
+    const navigate = useNavigate()
 const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required("Required"),
     password: Yup.string().required("Required")
@@ -14,8 +17,15 @@ const formik = useFormik({
     },
     onSubmit: values => {
         const login = async ()=>{
-             const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/auth/login",values,{headers:{"Content-Type":"application/x-www-form-urlencoded"}});
-             console.log(data);
+            try {
+                 const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/auth/login",values,{headers:{"Content-Type":"application/x-www-form-urlencoded"}});
+                //  <Navigate to={'/dashboard'} element={<Dashboard/>}/>
+                navigate('/dashboard')
+                console.log(data);
+            } catch (error) {
+                console.log(error);
+            }
+            
         }
         console.log('hi');
         login()
