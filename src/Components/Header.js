@@ -73,9 +73,9 @@ const Wrapper = styled.header`
         height: 100%;
     }
     img{
-        height: 5rem;
-        width: 5rem;
-        margin-left: .5rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        margin-left: 1.2rem;
     }
     .mobile-nav{
         height: 100vh;
