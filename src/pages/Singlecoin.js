@@ -14,7 +14,7 @@ const Singlecoin = ({order}) => {
       {/* {order}
       {id} */}
       
-      <h3>Philoro Gold Minted Bar of 999.9 fineness</h3>
+      <h3>Philoro Gold Minted Coin of 999.9 fineness</h3>
       <div className="image-container">
         <div className="ins">
           <div className="image">

@@ -15,7 +15,7 @@ import Dashboard from './pages/Dashboard';
 import Verfication from './pages/Verfication';
 import Protected from './Components/Protected';
 function App() {
-  const [token,setToken] = useState(JSON.parse(localStorage.getItem('token')) || null)
+ 
   const register = async() =>{
     try {
       // const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/users",{headers:{"Authorization":`Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJzaGEyNTYifQ.eyJzdWIiOjUsImV4cCI6MTY3MzU3MzE4N30.VTcwV1ROalV5dWptZm9yQlQ5Zy1rTk5hUnFudmkwOG1kZW0xZk96d0ZUVQ`}})
@@ -34,26 +34,26 @@ function App() {
   },[])
   
   return (
-    <Layout>
-      <Main>
-        <Routes>
+    <Main>
+      <Routes>
+        <Route element={<Layout/>}>
           <Route path='/' element={<Products />}/>
           <Route path='goldbars' element={<Goldbars/>}/>
           <Route path='open-account' element={<Openaccount/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='goldbars/buy/:id' element={<Singlegoldbar order='Buy' />}/>
-          <Route path='verification' element={<Verfication/>}/>
-          <Route element={<Protected/>}>
-            <Route path='dashboard' element={<Dashboard token= {token}/>}/>
-          </Route>
           <Route path='goldbars/sell/:id' element={<Singlegoldbar order='Sell'/>}/>
           <Route path='poolallocated' element={<Poolallocated/>}/>
           <Route path='goldcoins' element={<Goldcoins/>}/>
           <Route path='goldcoins/buy/:id' element={<Singlecoin order='Buy' />}/>
+          <Route path='verification' element={<Verfication/>}/>
           <Route path='goldcoins/sell/:id' element={<Singlecoin order='Sell'/>}/>
-        </Routes>
-      </Main>
-    </Layout>
+        <Route element={<Protected/>}>
+          <Route path='dashboard' element={<Dashboard/>}/>
+        </Route>
+        </Route>
+      </Routes>
+    </Main>
   );
 }
 

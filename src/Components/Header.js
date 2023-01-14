@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 import {FaBars, FaSearch, FaTimes} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDukia } from '../context/DukiaContext';
 const Header = () => {
     const {show,openSidebar,closeSidebar} = useDukia();
+    const token = JSON.parse(localStorage.getItem('token'))
+    const navigate = useNavigate()
+    const logout = ()=>{
+        localStorage.removeItem('token')
+        navigate('/login')
+    }
   return (
     <Wrapper>
         <nav>
@@ -20,7 +26,8 @@ const Header = () => {
                             <input type="text" placeholder='Search'/>
                             <FaSearch className='icon' />
                         </div>
-                        <Link to={'/open-account'}><button>Open Account</button></Link>
+                        
+                        {!token ?<Link><button>Open Account</button></Link> : <button onClick={logout}>Log Out</button>}
                           
                     </div>
                 </div>
