@@ -7,4 +7,14 @@ body{
   font-family: sans-serif;
   background: url('./Images/bgimg.jpg') center/cover no-repeat fixed;
   /* background-image: url('./Images/bgimg.jpg'); */
+  /* position: relative; */
+  /* height: 100vh; */
+}
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }

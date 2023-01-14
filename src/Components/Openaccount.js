@@ -7,8 +7,8 @@ const Openaccount = () => {
   return (
     <Wrapper>
         <div className="container">
-            <Instruction accType={accType} setAccType={setAccType}/>
-            <Form accType={accType}/>
+            {/* <Instruction accType={accType} setAccType={setAccType}/> */}
+            <Form />
         </div>
         
     </Wrapper>

@@ -61,7 +61,7 @@ const formik = useFormik({
 export default Login
 
 const Wrapper = styled.section`
-min-height: 100vh;
+height: 77.5vh;
 padding: 3rem 0;
 //set width later so do not delete
 width: 85%;

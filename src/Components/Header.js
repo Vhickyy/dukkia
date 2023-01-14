@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import {FaBars, FaSearch} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 const Header = () => {
+    const [show,setShow] = useState(false)
   return (
     <Wrapper>
         <nav>
@@ -11,7 +13,7 @@ const Header = () => {
                         <h4>Buy</h4>
                         <p className='top-p'>$432.43/oz</p>
                     </div>
-                    <FaBars className="icon mobile" />
+                    <FaBars className="icon mobile" onClick={()=>setShow(true)}/>
                     <div className='desktop'>
                         <div className='top-input'>
                             <input type="text" placeholder='Search'/>
@@ -24,11 +26,20 @@ const Header = () => {
             </div>
             <div className='end-nav'>
                 <div className='container flex-nav'>
-                    <h1>LOGO</h1>
+                    {/* <h1>LOGO</h1> */}
+                    <img src="https://dukiagoldrefinery.co/images/logo_centre_web.png" alt="dukkia logo" />
                     <p>Shop</p>
                 </div>
             </div>
         </nav>
+        {show && <div className='mobile-nav'>
+            <button onClick={()=>setShow(false)}>close</button>
+            <ul>
+                <li><Link to={'/'} onClick={()=>setShow(false)}>Home</Link></li>
+                <li><Link to={'/open-account'}onClick={()=>setShow(false)}>Open Account</Link></li>
+                <li><Link to={'/login'} onClick={()=>setShow(false)}>Log in</Link></li>
+            </ul>
+        </div>}
     </Wrapper>
    
   )
@@ -45,6 +56,7 @@ const Wrapper = styled.header`
     .top-nav{
         width: 100%;
         background-color: #fff;
+        height: 3rem;
         /* background-color: yellow; */
     }
     .top-p{
@@ -58,13 +70,29 @@ const Wrapper = styled.header`
         width: 85%;
         /* background-color: brown; */
         margin: 0 auto;
-        height: 3rem;
+        height: 100%;
     }
+    img{
+        height: 5rem;
+        width: 5rem;
+        margin-left: .5rem;
+    }
+    .mobile-nav{
+        height: 100vh;
+        position: fixed;
+        background-color: #244D91;
+        top: 0;
+        right: 0;
+        /* bottom: 0; */
+        /* z-index: 10; */
+        width: 50%;
+    }
+    
     .flex-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: pink; */
+    /* height: auto; */
     }
     .top{
         background-color: black;
@@ -119,6 +147,9 @@ const Wrapper = styled.header`
         .mobile{
             display: none;
         }
+        .mobile-nav{
+            display: none;
+        }
         .desktop{
             /* width: 70%; */
             display: grid;
@@ -129,82 +160,3 @@ const Wrapper = styled.header`
         }
     }
 `
-// const Wrapper = styled.header`
-// background-color: blue;
-// padding-bottom: 5px;
-// nav{
-//     min-width: 85%;
-//     max-width: 550px;
-//     margin: 0 auto;
-//     padding-top: 2.5em;
-// }
-// .flex-nav{
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     /* background-color: pink; */
-// }
-// input{
-//     border-radius: 0.3rem;
-//     border: none;
-//     padding: 0 .5rem;
-//     font-size: larger;
-// }
-// .mobile-input{
-//     margin-top: 1em;
-//     height: 3rem;
-//     width: 100%;
-// }
-// .desktop{
-//     display: none;
-// }
-// h2{
-//     text-align: center;
-// }
-// @media (min-width:900px){
-//     .mobile{
-//         display: none;
-//     }
-//     .mobile-input{
-//         display: none;
-//     }
-//     nav{
-//         padding-bottom: 2.5rem;
-//     }
-//     .desktop{
-//         width: 80%;
-//         display: grid;
-//         grid-template-columns: 3fr 1fr 1fr;
-//         align-items: center;
-//         column-gap: 1rem;
-//     }
-//     .desktop input{
-//         height: 2.5rem;
-//     }
-//     button{
-//         height: 2.5rem;
-//         border: none;
-//         border-radius: 1rem;
-//     }
-// }
-// `
-
-
- // <Wrapper>
-    //     <nav>
-    //         <div className='flex-nav'>
-    //             <h1>LOGO</h1>
-    //             <FaBars size='40' className='mobile'/>
-    //         <div className='desktop'>
-    //             {/* <div> */}
-    //                 <input type="text" placeholder='Search here' />
-    //                 {/* <FaSearch/> */}
-    //             {/* </div> */}
-    //             <h2>FAQ</h2>
-    //             <button>Open Account</button>
-    //         </div>
-    //         </div>
-            
-    //         <input className='mobile-input' type="text" placeholder='Search here' />
-    //     </nav>
-    // </Wrapper>

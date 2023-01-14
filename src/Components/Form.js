@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 
-const Form = ({accType}) => {
+const Form = () => {
     const navigate = useNavigate()
     const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required("Required"),
