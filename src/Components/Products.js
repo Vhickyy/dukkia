@@ -3,9 +3,9 @@ import gold from '../Images/gold.jpg'
 import Hero from './Hero'
 import Product from './Product'
 
-const Products = () =>{
+const Products = ({setShow}) =>{
     return (
-        <Wrapper>
+        <Wrapper onClick={()=>setShow(false)}>
             <Hero/>
             <Product/>
         </Wrapper>

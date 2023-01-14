@@ -16,6 +16,7 @@ import Verfication from './Components/Verfication';
 import Protected from './Components/Protected';
 function App() {
   const [token,setToken] = useState(JSON.parse(localStorage.getItem('token')) || null)
+  const [show,setShow] = useState(false)
   const register = async() =>{
     try {
       // const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/users",{headers:{"Authorization":`Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJzaGEyNTYifQ.eyJzdWIiOjUsImV4cCI6MTY3MzU3MzE4N30.VTcwV1ROalV5dWptZm9yQlQ5Zy1rTk5hUnFudmkwOG1kZW0xZk96d0ZUVQ`}})
@@ -34,10 +35,10 @@ function App() {
   },[])
   
   return (
-    <Layout>
+    <Layout show={show} setShow={setShow}>
       <Main>
         <Routes>
-          <Route path='/' element={<Products/>}/>
+          <Route path='/' element={<Products show={show} setShow={setShow}/>}/>
           <Route path='goldbars' element={<Goldbars/>}/>
           <Route path='open-account' element={<Openaccount/>}/>
           <Route path='login' element={<Login/>}/>
