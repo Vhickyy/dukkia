@@ -35,4 +35,7 @@ margin: 0 auto;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 7px gray;
 }
+a{
+  color: black;
+}
 `

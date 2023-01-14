@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useFormik } from "formik"
 import axios from "axios"
 import * as Yup from 'yup'
-import { Navigate, useNavigate } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import Dashboard from "./Dashboard"
 const Login = () => {
     const navigate = useNavigate()
@@ -52,6 +52,7 @@ const formik = useFormik({
                 </div>
                 <button type="submit">Submit</button>
             </form>
+            <p>Don't have an account? <Link to={'/open-account'}>Sign up</Link></p>
         </div>
         
     </Wrapper>
@@ -85,6 +86,9 @@ form{
     /* display: grid;
     gap: 1rem; */
 }
+a{
+    color: black;
+}
 form div{
     display: flex;
     flex-direction: column;
@@ -103,8 +107,8 @@ form div{
 
 button{
     /* width: 15rem; */
-    align-self: flex-end;
-    margin-top: 1rem;
+    /* align-self: flex-end; */
+    margin-bottom: .4rem;
     padding: .5rem 1rem;
     font-size: 1.1rem;
     border-radius: .5rem;
