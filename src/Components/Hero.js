@@ -25,6 +25,7 @@ const Wrapper = styled.aside`
     background-color: white;
     box-shadow: 2px 2px 5px gray, -3px -3px 7px gray;
     border-radius: 1rem;
+    max-width: 100%;
 .first{
     line-height: 2.rem;
     letter-spacing: .2rem;
@@ -32,7 +33,7 @@ const Wrapper = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 70%;
+    max-width: 70%;
 }
 .second{
     display: none;

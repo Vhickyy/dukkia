@@ -1,11 +1,12 @@
-import Form from "./Form"
+import Form from "../Components/Form"
 import styled from "styled-components"
-import Instruction from "./Instruction"
+import Instruction from "../Components/Instruction"
 import { useState } from "react"
+import { useDukia } from "../context/DukiaContext"
 const Openaccount = () => {
-  const [accType,setAccType] = useState("individual")
+  const {closeSidebar} = useDukia();
   return (
-    <Wrapper>
+    <Wrapper onClick={closeSidebar}>
         <div className="container">
             {/* <Instruction accType={accType} setAccType={setAccType}/> */}
             <Form />

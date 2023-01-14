@@ -1,15 +1,16 @@
 import styled from "styled-components"
 import gold from '../Images/gold.jpg'
 import { useParams } from 'react-router-dom'
-import {data} from './Goldbardata'
-import Specification from "./Specification"
-import ProductDescription from "./GoldbarProductDescription"
-import Goldbarform from "./Goldbarform"
-const Singlegoldbar = ({order}) => {
+import {data} from '../Components/Goldcoinsdata'
+import Specification from "../Components/Specification"
+import Goldbarform from "../Components/Goldbarform"
+import { useDukia } from "../context/DukiaContext"
+const Singlecoin = ({order}) => {
+  const {closeSidebar} = useDukia()
   const {id} = useParams()
-  const oneItem = data.find(item=> item.id.toString() === id);
+  const oneItem = data.find(item=> item.id.toString() === id)
   return (
-    <Wrapper>
+    <Wrapper onClick={closeSidebar}>
       {/* {order}
       {id} */}
       
@@ -19,15 +20,15 @@ const Singlegoldbar = ({order}) => {
           <div className="image">
           <img src={oneItem.img} alt="" />
           </div>
-          <div className="first">
+          {/* <div className="first">
           <p>The {oneItem.amount} Grams minted gold bar from Philoro is a 999.9 fine gold with a high-lustre finish and rounded edges</p>
-          </div>
+          </div> */}
         </div>
         
         <div className="spec1">
          <Specification amount={oneItem.amount}/>
          <p>{order} order</p>
-         <p>Name: {oneItem.name}</p>
+         <p>Name: {}</p>
           <div>
             <Goldbarform order={order} name={oneItem.name}/>
           </div>
@@ -35,12 +36,14 @@ const Singlegoldbar = ({order}) => {
       </div>
       
       <div className="product">
-        <ProductDescription/>
+        <h3>Product description</h3>
+        <p>{oneItem.desc}</p>
+        <p>The gold coin is VAT free if the secure storage option with Brink's is opted for. Storage fee is free for the first 12 months of storage. Your specific numbered gold bar will be fully allocated to you in your name and segregated within the vault.</p>
+        <p>All shipping costs is inclusive of handling, protective packaging, insurance, and VAT. The cost of shipping to your preferred location will be advised upon request.</p>
       </div>
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
         <p>{order} order</p>
-        <p>Name: {oneItem.name}</p>
         <Goldbarform order={order} name={oneItem.name}/>
       </div>
       
@@ -48,7 +51,7 @@ const Singlegoldbar = ({order}) => {
   )
 }
 
-export default Singlegoldbar
+export default Singlecoin
 
 const Wrapper = styled.main`
 padding: 3rem 0;
@@ -64,7 +67,7 @@ gap: 2rem;
   /* background-color: blue; */
 }
 .image{
-  height: 30rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   /* background-color: green; */
@@ -75,6 +78,7 @@ gap: 2rem;
 img{
   display: block;
   width: 20rem;
+  object-fit: contain;
   border-radius: 0.5rem;
 }
 .first{
@@ -93,8 +97,8 @@ h3{
   gap: 1rem;
 }
 .product{
-  display: grid;
-  gap: 1rem;
+    display: grid;
+    gap: 1rem;
 }
 @media (min-width: 850px){
   gap: 2rem;

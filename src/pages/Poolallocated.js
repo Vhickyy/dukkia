@@ -1,10 +1,12 @@
 import styled from "styled-components"
-import Poolform from "./Poolform"
-import Poolinfo from "./Poolinfo"
+import Poolform from "../Components/Poolform"
+import Poolinfo from "../Components/Poolinfo"
+import { useDukia } from "../context/DukiaContext"
 import gold from '../Images/gold.jpg'
 const Poolallocated = () => {
+  const {closeSidebar} = useDukia()
   return (
-    <Wrapper>
+    <Wrapper onClick={closeSidebar}>
       <h3>About Our Pool Allocated Gold Product</h3>
         <div className="content">
             <Poolinfo/>

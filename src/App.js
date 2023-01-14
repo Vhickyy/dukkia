@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 import Layout from './Components/Layout';
-import Products from './Components/Products';
+import Products from './pages/Products';
 import { Routes, Route} from 'react-router-dom'
-import Openaccount from './Components/Openaccount';
-import Goldbars from './Components/Goldbars';
-import Singlegoldbar from './Components/Singlegoldbar';
-import Poolallocated from './Components/Poolallocated';
-import Goldcoins from './Components/Goldcoins';
-import Singlecoin from './Components/Singlecoin';
+import Openaccount from './pages/Openaccount';
+import Goldbars from './pages/Goldbars';
+import Singlegoldbar from './pages/Singlegoldbar';
+import Poolallocated from './pages/Poolallocated';
+import Goldcoins from './pages/Goldcoins';
+import Singlecoin from './pages/Singlecoin';
 import axios from 'axios';
-import Login from './Components/Login'
+import Login from './pages/Login'
 import { useEffect, useState } from 'react';
-import Dashboard from './Components/Dashboard';
-import Verfication from './Components/Verfication';
+import Dashboard from './pages/Dashboard';
+import Verfication from './pages/Verfication';
 import Protected from './Components/Protected';
 function App() {
   const [token,setToken] = useState(JSON.parse(localStorage.getItem('token')) || null)
-  const [show,setShow] = useState(false)
   const register = async() =>{
     try {
       // const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/users",{headers:{"Authorization":`Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJzaGEyNTYifQ.eyJzdWIiOjUsImV4cCI6MTY3MzU3MzE4N30.VTcwV1ROalV5dWptZm9yQlQ5Zy1rTk5hUnFudmkwOG1kZW0xZk96d0ZUVQ`}})
@@ -35,10 +34,10 @@ function App() {
   },[])
   
   return (
-    <Layout show={show} setShow={setShow}>
+    <Layout>
       <Main>
         <Routes>
-          <Route path='/' element={<Products show={show} setShow={setShow}/>}/>
+          <Route path='/' element={<Products />}/>
           <Route path='goldbars' element={<Goldbars/>}/>
           <Route path='open-account' element={<Openaccount/>}/>
           <Route path='login' element={<Login/>}/>

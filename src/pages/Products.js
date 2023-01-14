@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import { useDukia } from '../context/DukiaContext'
 import gold from '../Images/gold.jpg'
-import Hero from './Hero'
-import Product from './Product'
+import Hero from '../Components/Hero'
+import Product from '../Components/Product'
 
-const Products = ({setShow}) =>{
+const Products = () =>{
+    const {closeSidebar} = useDukia();
     return (
-        <Wrapper onClick={()=>setShow(false)}>
+        <Wrapper onClick={closeSidebar}>
             <Hero/>
             <Product/>
         </Wrapper>

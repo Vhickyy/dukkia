@@ -1,9 +1,11 @@
 import styled from "styled-components"
-import {data} from './Goldcoinsdata'
+import {data} from '../Components/Goldcoinsdata'
 import { Link } from "react-router-dom"
+import { useDukia } from "../context/DukiaContext"
 const Goldcoins = () => {
+    const {closeSidebar} = useDukia();
   return (
-    <Wrapper>
+    <Wrapper onClick={closeSidebar}>
         <div className="container">
             {data.map((item,index)=>{
             return (

@@ -1,14 +1,17 @@
 import styled from "styled-components"
 import gold from '../Images/gold.jpg'
 import { useParams } from 'react-router-dom'
-import {data} from './Goldcoinsdata'
-import Specification from "./Specification"
-import Goldbarform from "./Goldbarform"
-const Singlecoin = ({order}) => {
+import {data} from '../Components/Goldbardata'
+import Specification from "../Components/Specification"
+import ProductDescription from "../Components/GoldbarProductDescription"
+import Goldbarform from "../Components/Goldbarform"
+import { useDukia } from "../context/DukiaContext"
+const Singlegoldbar = ({order}) => {
+  const {closeSidebar} = useDukia();
   const {id} = useParams()
-  const oneItem = data.find(item=> item.id.toString() === id)
+  const oneItem = data.find(item=> item.id.toString() === id);
   return (
-    <Wrapper>
+    <Wrapper onClick={closeSidebar}>
       {/* {order}
       {id} */}
       
@@ -26,7 +29,7 @@ const Singlecoin = ({order}) => {
         <div className="spec1">
          <Specification amount={oneItem.amount}/>
          <p>{order} order</p>
-         <p>Name: {}</p>
+         <p>Name: {oneItem.name}</p>
           <div>
             <Goldbarform order={order} name={oneItem.name}/>
           </div>
@@ -34,14 +37,12 @@ const Singlecoin = ({order}) => {
       </div>
       
       <div className="product">
-        <h3>Product description</h3>
-        <p>{oneItem.desc}</p>
-        <p>The gold coin is VAT free if the secure storage option with Brink's is opted for. Storage fee is free for the first 12 months of storage. Your specific numbered gold bar will be fully allocated to you in your name and segregated within the vault.</p>
-        <p>All shipping costs is inclusive of handling, protective packaging, insurance, and VAT. The cost of shipping to your preferred location will be advised upon request.</p>
+        <ProductDescription/>
       </div>
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
         <p>{order} order</p>
+        <p>Name: {oneItem.name}</p>
         <Goldbarform order={order} name={oneItem.name}/>
       </div>
       
@@ -49,7 +50,7 @@ const Singlecoin = ({order}) => {
   )
 }
 
-export default Singlecoin
+export default Singlegoldbar
 
 const Wrapper = styled.main`
 padding: 3rem 0;
@@ -65,7 +66,7 @@ gap: 2rem;
   /* background-color: blue; */
 }
 .image{
-  height: 30rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   /* background-color: green; */
@@ -77,6 +78,7 @@ img{
   display: block;
   width: 20rem;
   border-radius: 0.5rem;
+  object-fit: contain;
 }
 .first{
   border: 2px solid black;
@@ -94,8 +96,8 @@ h3{
   gap: 1rem;
 }
 .product{
-    display: grid;
-    gap: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 @media (min-width: 850px){
   gap: 2rem;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-import Login from './Login'
+import Login from '../pages/Login'
 
 const Protected = ({chldren}) => {
     const token = JSON.parse(localStorage.getItem('token'))

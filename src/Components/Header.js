@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import {FaBars, FaSearch} from 'react-icons/fa';
+import {FaBars, FaSearch, FaTimes} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-const Header = ({show,setShow}) => {
-    
+import { useDukia } from '../context/DukiaContext';
+const Header = () => {
+    const {show,openSidebar,closeSidebar} = useDukia();
   return (
     <Wrapper>
         <nav>
@@ -13,7 +14,7 @@ const Header = ({show,setShow}) => {
                         <h4>Buy</h4>
                         <p className='top-p'>$432.43/oz</p>
                     </div>
-                    <FaBars className="icon mobile" onClick={()=>setShow(true)}/>
+                    <FaBars className="icon mobile" onClick={openSidebar}/>
                     <div className='desktop'>
                         <div className='top-input'>
                             <input type="text" placeholder='Search'/>
@@ -33,11 +34,11 @@ const Header = ({show,setShow}) => {
             </div>
         </nav>
         {show && <div className='mobile-nav'>
-            <button onClick={()=>setShow(false)}>close</button>
+            <button onClick={closeSidebar}><FaTimes/></button>
             <ul>
-                <li><Link to={'/'} onClick={()=>setShow(false)}>Home</Link></li>
-                <li><Link to={'/open-account'}onClick={()=>setShow(false)}>Open Account</Link></li>
-                <li><Link to={'/login'} onClick={()=>setShow(false)}>Log in</Link></li>
+                <li><Link to={'/'} onClick={closeSidebar}>Home</Link></li>
+                <li><Link to={'/open-account'}onClick={closeSidebar}>Open Account</Link></li>
+                <li><Link to={'/login'} onClick={closeSidebar}>Log in</Link></li>
             </ul>
         </div>}
     </Wrapper>

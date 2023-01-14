@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import Header from "./Header"
 
-const Layout = ({children, show, setShow}) => {
+const Layout = ({children}) => {
   return (
     <>
-    <Header show={show} setShow={setShow}/>
+    <Header/>
     {children}
     <Footer>copyright {new Date().getFullYear()}</Footer>
     </>

@@ -1,8 +1,15 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext,useState } from "react";
 const DukiaContext = createContext({})
-const DukiaContextProvider = ({children})=>{
+export const DukiaContextProvider = ({children})=>{
+    const [show,setShow] = useState(false)
+    const openSidebar = ()=>{
+        setShow(true)
+    }
+    const closeSidebar = ()=>{
+        setShow(false)
+    }
     return (
-        <DukiaContext.Provider>
+        <DukiaContext.Provider value={{openSidebar,closeSidebar,show}}>
             {children}
         </DukiaContext.Provider>
     )

@@ -4,7 +4,9 @@ import axios from "axios"
 import * as Yup from 'yup'
 import { Link, Navigate, useNavigate } from "react-router-dom"
 import Dashboard from "./Dashboard"
+import { useDukia } from "../context/DukiaContext"
 const Login = () => {
+    const {closeSidebar} = useDukia();
     const navigate = useNavigate()
 const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required("Required"),
@@ -35,7 +37,7 @@ const formik = useFormik({
 })
 // console.log(formik.errors);
   return (
-    <Wrapper>
+    <Wrapper onClick={closeSidebar}>
         <div className="container">
             <form onSubmit={formik.handleSubmit}>
                 <div >
@@ -110,7 +112,7 @@ button{
     /* align-self: flex-end; */
     margin-bottom: .4rem;
     padding: .5rem 1rem;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     border-radius: .5rem;
     border: none;
     background-color: #244D91;
