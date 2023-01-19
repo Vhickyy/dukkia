@@ -3,7 +3,6 @@ import { useFormik } from "formik"
 import axios from "axios"
 import * as Yup from 'yup'
 import { Link, Navigate, useNavigate } from "react-router-dom"
-import Dashboard from "./Dashboard"
 import { useDukia } from "../context/DukiaContext"
 import { useEffect, useState } from "react"
 import Alert from "../Components/Alert"
@@ -11,13 +10,6 @@ const Login = () => {
     const [error,setError] = useState('')
     const {closeSidebar} = useDukia();
     const navigate = useNavigate()
-    // useEffect(()=>{
-    //     console.log('e');
-    //     const timer = setTimeout(()=>{
-    //         setError('')
-    //     },2000)
-    //     return ()=>clearTimeout(timer)
-    // },[])
 const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required("Required"),
     password: Yup.string().required("Required")

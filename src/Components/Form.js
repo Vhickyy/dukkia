@@ -28,8 +28,7 @@ const formik = useFormik({
         const register = async ()=>{
             const token = JSON.parse(localStorage.getItem('token'))
             try {
-                  const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/users",values,{headers:{"Content-Type":"application/x-www-form-urlencoded",
-                 "Authorization":`Bearer ${token}`}})
+                  const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/users",values,{headers:{"Content-Type":"application/x-www-form-urlencoded"}})
                 navigate('/verification')
                 console.log(data);
             } catch (error) {

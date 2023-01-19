@@ -18,10 +18,7 @@ function App() {
  
   const register = async() =>{
     try {
-      // const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/users",{headers:{"Authorization":`Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJzaGEyNTYifQ.eyJzdWIiOjUsImV4cCI6MTY3MzU3MzE4N30.VTcwV1ROalV5dWptZm9yQlQ5Zy1rTk5hUnFudmkwOG1kZW0xZk96d0ZUVQ`}})
-    //   const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/users",{first_name:'dukkias',last_name:'apps',email:"dukkiaapps@gmail.com",phone:"87678754677",password:'dukkia'},{headers:{"Content-Type":"application/x-www-form-urlencoded",
-    // "Authorization":`Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJzaGEyNTYifQ.eyJzdWIiOjUsImV4cCI6MTY3MzU3MzE4N30.VTcwV1ROalV5dWptZm9yQlQ5Zy1rTk5hUnFudmkwOG1kZW0xZk96d0ZUVQ`}})
-      // const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/auth/login",{email:"hello@techassembly.co",password:"sasa"},{headers:{"Content-Type":"application/x-www-form-urlencoded"}})
+      // const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/users",{headers:{"Authorization":`Bearer`}})
       // console.log(data);
     } catch (error) {
       console.log(error);
