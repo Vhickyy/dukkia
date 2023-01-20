@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const data = [
     {
         id:'1',
-        img: '/Images/bgimg.jpg',
+        img: '/Images/10gram.JPG',
         name: 'Gold Bar',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell Gold Bars",
@@ -13,7 +13,7 @@ const data = [
     },
     {
         id:'2',
-        img: '/Images/bgimg.jpg',
+        img: '/Images/britannia.JPG',
         name: 'Gold Coins',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell Gold Coins",
@@ -21,7 +21,7 @@ const data = [
     },
     {
         id:'3',
-        img: '/Images/bgimg.jpg',
+        img: '/Images/sovereign.JPG',
         name: 'Pool Allocated',
         desc: "We work on experimental design, and it's crucial to have the output that reflects our identity as designers.",
         btn: "Buy/sell X Qty",
@@ -35,7 +35,7 @@ const Product = () => {
                 return(
                     <div key={item.id} className='item'>
                         <div className='img'>
-                            <img src={gold} alt="" />
+                            <img src={item.img} alt="" />
                         </div>
                         <div className='text'>
                             <div>
@@ -54,25 +54,25 @@ const Product = () => {
 export default Product
 
 
-const Wrapper = styled.aside`
-
+const Wrapper = styled.section`
     /* background-color: brown; */
     margin-top: 4rem;
     display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(17rem,1fr));
 .item{
-    background-color: green;
+    background-color: white;
     flex: 0 1 100%;
     border-radius: 1rem;
     overflow: hidden;
 }
 .img{
-    height: 16rem;
+    height: 14rem;
 }
 img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 .text{
     background-color: #F1DE78;

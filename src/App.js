@@ -15,11 +15,12 @@ import Dashboard from './pages/Dashboard';
 import Verfication from './pages/Verfication';
 import Protected from './Components/Protected';
 function App() {
- 
+ const [l,sL] = useState(false)
   const register = async() =>{
     try {
-      // const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/users",{headers:{"Authorization":`Bearer`}})
-      // console.log(data);
+      const {data} = await axios("https://php-server-repl-api.samueliso.repl.co/api/orders/user/1")
+      // ,{headers:{"Authorization":`Bearer`}}
+      console.log(data);
     } catch (error) {
       console.log(error);
     }

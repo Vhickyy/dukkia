@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import {FaBars, FaSearch, FaTimes} from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDukia } from '../context/DukiaContext';
 const Header = () => {
     const {show,openSidebar,closeSidebar} = useDukia();
+    console.log(show);
     const token = JSON.parse(localStorage.getItem('token'))
     const navigate = useNavigate()
     const logout = ()=>{
@@ -26,28 +27,28 @@ const Header = () => {
                             <input type="text" placeholder='Search'/>
                             <FaSearch className='icon' />
                         </div>
+                        <Link><button>Open Account</button></Link>
                         
-                        {!token ?<Link><button>Open Account</button></Link> : <button onClick={logout}>Log Out</button>}
+                        {/* {!token ?<Link><button>Open Account</button></Link> : <button onClick={logout}>Log Out</button>} */}
                           
                     </div>
                 </div>
             </div>
             <div className='end-nav'>
                 <div className='container flex-nav'>
-                    {/* <h1>LOGO</h1> */}
                     <img src="https://dukiagoldrefinery.co/images/logo_centre_web.png" alt="dukkia logo" />
                     <p>Shop</p>
                 </div>
             </div>
         </nav>
-        {show && <div className='mobile-nav'>
-            <button onClick={closeSidebar}><FaTimes/></button>
-            <ul>
-                <li><Link to={'/'} onClick={closeSidebar}>Home</Link></li>
-                <li><Link to={'/open-account'}onClick={closeSidebar}>Open Account</Link></li>
-                <li><Link to={'/login'} onClick={closeSidebar}>Log in</Link></li>
-            </ul>
-        </div>}
+        <div className={`mobile-nav ${show ? 'show-mobile' : 'hide-mobile'}`}>
+            <FaTimes onClick={closeSidebar} className='icon side-icon'/>
+            <div className='side'>
+                <NavLink className={({isActive})=>isActive?'link active':'link'} to={'/'} onClick={closeSidebar}>Home</NavLink>
+                <NavLink className={({isActive})=>isActive?'link active':'link'} to={'/open-account'}onClick={closeSidebar}>Open Account</NavLink>
+                <NavLink className={({isActive})=>isActive?'link active':'link'} to={'/login'} onClick={closeSidebar}>Log in</NavLink>
+            </div>
+        </div>
     </Wrapper>
    
   )
@@ -91,16 +92,42 @@ const Wrapper = styled.header`
         background-color: #244D91;
         top: 0;
         right: 0;
-        /* bottom: 0; */
-        /* z-index: 10; */
+        z-index: 10;
         width: 50%;
+        transition: all .3s linear;
+        padding: 2rem 0;
+        display: grid;
+        grid-template-rows: 2rem auto;
+        gap: 1rem;
     }
-    
+    .hide-mobile{
+        transform: translateX(100%);
+    }
+    .show-mobile{
+        transform: translateX(0);
+    }
+    .side{
+        display: flex;
+        flex-direction: column;
+    }
     .flex-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* height: auto; */
+    }
+    .link{
+        color:#fff;
+        border-bottom: .1px solid white;
+        padding: .7rem 1.5rem;
+        transition: all .2s linear;
+    }
+    .link:hover{
+        background-color: gray;
+        padding-left: 2.5rem;
+    }
+    .active{
+        color: yellow;
     }
     .top{
         background-color: black;
@@ -151,7 +178,10 @@ const Wrapper = styled.header`
         height: 2rem;
         width: 1.5rem;
     }
-    @media (min-width:970px){
+    .side-icon{
+        margin-left: 1.5rem;
+    }
+    @media (min-width:860px){
         .mobile{
             display: none;
         }
