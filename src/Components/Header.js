@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import {FaBars, FaSearch, FaTimes} from 'react-icons/fa';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import { useDukia } from '../context/DukiaContext';
 const Header = () => {
     const {show,openSidebar,closeSidebar} = useDukia();
-    console.log(show);
     const token = JSON.parse(localStorage.getItem('token'))
     const navigate = useNavigate()
     const logout = ()=>{
@@ -28,9 +26,7 @@ const Header = () => {
                             <FaSearch className='icon' />
                         </div>
                         <Link><button>Open Account</button></Link>
-                        
                         {/* {!token ?<Link><button>Open Account</button></Link> : <button onClick={logout}>Log Out</button>} */}
-                          
                     </div>
                 </div>
             </div>
@@ -50,15 +46,11 @@ const Header = () => {
             </div>
         </div>
     </Wrapper>
-   
   )
 }
-
 export default Header
 
 const Wrapper = styled.header`
-    nav{
-    }
     p{
         font-size: 15px;
     }
@@ -93,7 +85,7 @@ const Wrapper = styled.header`
         top: 0;
         right: 0;
         z-index: 10;
-        width: 50%;
+        width: 65%;
         transition: all .3s linear;
         padding: 2rem 0;
         display: grid;
@@ -153,7 +145,6 @@ const Wrapper = styled.header`
         width: 90%;
         border: none;
         padding: 0 0.5rem;
-        /* background-color: yellow; */
         font-size: larger;
         border-radius: .5rem;
         border-bottom: 1px solid #A69145;
