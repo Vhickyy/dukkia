@@ -2,7 +2,9 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { useDukia } from '../context/DukiaContext';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaCartPlus, FaTimes } from 'react-icons/fa';
+import {AiOutlineShoppingCart} from 'react-icons/ai';
+// AiOutlineShoppingCart
 
 const TopNav = () => {
     const {show,openSidebar,closeSidebar} = useDukia();
@@ -16,6 +18,7 @@ const TopNav = () => {
                         <p className='top-p'>$432.43/oz</p>
                     </div>
                     <div className='top-btn'>
+                        <AiOutlineShoppingCart className='cart'/>
                         <Link>Sign in</Link>
                         <Link><button>Get Started</button></Link>
                     </div>
@@ -26,10 +29,11 @@ const TopNav = () => {
                     <img src="https://dukiagoldrefinery.co/images/logo_centre_web.png" alt="dukkia logo" />
                     <FaBars className="icon mobile" onClick={openSidebar}/>
                     <div className='desktop'>
-                        <p>Goldbars</p>
-                        <p>Goldcoins</p>
-                        <p>About</p>
-                        <p>Store</p>
+                        <Link to={'/goldbars'}>Goldbars</Link>
+                        <Link to={'/goldcoins'}>Goldcoins</Link>
+                        <a href='https://dukiagoldrefinery.co' target='_blank'>About</a>
+                        <Link to={'#'}>Store</Link>
+                        <Link to={'#'}>Contact Us</Link>
                     </div>
                 </div>
             </div>
@@ -81,7 +85,7 @@ img{
     align-items: center;
 }
 .top-btn{
-    width: 11rem;
+    width: 14rem;
     /* background-color: yellow; */
     display: flex;
     justify-content: space-between;
@@ -99,6 +103,10 @@ button{
 }
 .icon{
     color: #A69145;
+    height: 2rem;
+    width: 1.5rem;
+}
+.cart{
     height: 2rem;
     width: 1.5rem;
 }
@@ -154,12 +162,13 @@ button{
     }
     .desktop{
         width: 70%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
         align-items: center;
         justify-content: space-between;
-        /* column-gap: 2rem; */
-        background-color: yellow;
+        color: #fff;
+        a{
+            color:#fff
+        }
     }
 }
 `
