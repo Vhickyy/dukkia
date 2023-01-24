@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <Wrapper>
         <div className='first'>
-            <h3>Buy and sell gold and precious metals with trust.</h3>
-            <Link to={'/open-account'}><button>Open an account</button></Link>
+            <h3>Buy and sell gold and other investment grade precious metals from DukiaGold, your trustworthy refinery and bullion merchant.</h3>
+            <Link to={'/open-account'}><button>Buy Now</button></Link>
         </div>
         <div className='second'>
             <img src={gold} alt="" />
@@ -21,10 +21,10 @@ const Wrapper = styled.aside`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     background-color: white;
-    box-shadow: 2px 2px 5px gray, -3px -3px 7px gray;
-    border-radius: 1rem;
+    box-shadow: 2px 2px 3px gray;
+    border-radius: .5rem;
     max-width: 100%;
 .first{
     line-height: 2.rem;

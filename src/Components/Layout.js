@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom"
 import styled from "styled-components"
 import Header from "./Header"
+import TopNav from "./TopNav"
 
 const Layout = ({children}) => {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
+    <TopNav/>
     <Outlet/>
     <Footer>copyright {new Date().getFullYear()}</Footer>
     </>

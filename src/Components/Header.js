@@ -24,8 +24,8 @@ const Header = () => {
                         <div className='top-input'>
                             <input type="text" placeholder='Search'/>
                             <FaSearch className='icon' />
+                            <Link><button>Get Started</button></Link>
                         </div>
-                        <Link><button>Open Account</button></Link>
                         {/* {!token ?<Link><button>Open Account</button></Link> : <button onClick={logout}>Log Out</button>} */}
                     </div>
                 </div>
