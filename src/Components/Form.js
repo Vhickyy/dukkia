@@ -11,7 +11,7 @@ const Form = () => {
     email: Yup.string().email('Invalid email format').required("Required"),
     password: Yup.string().required("Required"),
     first_name: Yup.string().required("Required"),
-    last_name: Yup.string().required("Required"),
+    surname: Yup.string().required("Required"),
     middle_name: Yup.string().required("Required"),
     phone: Yup.string().required("Required"),
 })
@@ -21,7 +21,7 @@ const formik = useFormik({
         password:"",
         first_name:"",
         middle_name:"",
-        last_name:"",
+        surname:"",
         phone:""
     },
     onSubmit: values => {
@@ -50,16 +50,16 @@ const formik = useFormik({
                 {formik.touched.first_name && formik.errors.first_name && <p className="error">{formik.errors.first_name}</p>}
             </div>
             <div >
-                <label htmlFor="lastname">Last Name:</label>
-                <input type="text" id="lastname" className="text" name="last_name" value={formik.values.middlename} onChange={formik.handleChange}
-                onBlur={formik.handleBlur}/>
-                {formik.touched.last_name && formik.errors.last_name && <p className="error">{formik.errors.last_name}</p>}
-            </div>
-            <div >
                 <label htmlFor="middlename">Middle Name:</label>
                 <input type="text" className="text" id="middlename" name="middle_name" value={formik.values.lastname} onChange={formik.handleChange}
                 onBlur={formik.handleBlur}/>
                 {formik.touched.middle_name && formik.errors.middle_name && <p className="error">{formik.errors.middle_name}</p>}
+            </div>
+            <div >
+                <label htmlFor="surname">Surname:</label>
+                <input type="text" id="surname" className="text" name="surname" value={formik.values.surname} onChange={formik.handleChange}
+                onBlur={formik.handleBlur}/>
+                {formik.touched.surname && formik.errors.surname && <p className="error">{formik.errors.surname}</p>}
             </div>
             <div >
                 <label htmlFor="email">Email</label>

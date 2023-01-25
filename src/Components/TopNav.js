@@ -52,6 +52,11 @@ const TopNav = () => {
 
 export default TopNav
 const Wrapper = styled.header`
+/* nav{ */
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(10px);
+/* } */
 .top-nav{
     width: 100%;
     height: 3.5rem;
@@ -78,22 +83,22 @@ img{
     background-color: black;
     color: #fff;
     height: 100%;
-    width: 6rem;
+    width: 5.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 .top-btn{
-    width: 14rem;
+    width: 12rem;
     /* background-color: yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 button{
-    width: 7rem;
-    padding: .4rem .7rem;
+    width: 6rem;
+    padding: .4rem .4rem;
     border: none;
     border-radius: 0.5rem;
     background-color: #244D91;

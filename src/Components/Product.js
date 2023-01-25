@@ -56,7 +56,10 @@ export default Product
 
 const Wrapper = styled.section`
     /* background-color: brown; */
-    margin-top: 4rem;
+    padding: 3rem 0;
+    width: 85%;
+    margin: 0 auto;
+    /* margin-top: 4rem; */
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill,minmax(17rem,1fr));
