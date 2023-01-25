@@ -16,8 +16,9 @@ const Header = () => {
             <div className='top-nav'>
                 <div className='container flex-nav'>
                     <div className='top'>
-                        <h4>Buy</h4>
-                        <p className='top-p'>$432.43/oz</p>
+                
+                       <span> Buy: </span> <span className='top-p'>$178.43/oz</span> <span>Sell: </span> $178.9
+                      
                     </div>
                     <FaBars className="icon mobile" onClick={openSidebar}/>
                     <div className='desktop'>
@@ -122,7 +123,6 @@ const Wrapper = styled.header`
         color: yellow;
     }
     .top{
-        background-color: black;
         color: #fff;
         height: 100%;
         width: 6rem;
