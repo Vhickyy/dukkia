@@ -6,7 +6,7 @@ const Hero = () => {
     <Wrapper>
         <div className='first'>
             <h2>Buy and sell gold</h2>
-            <p>& other investment grade precious metals from DukiaGold, your trustworthy refinery & bullion merchant.</p>
+            <p>DukiaGold, your trustworthy refinery & bullion merchant.</p>
         </div>
         <Link to={'/open-account'}><button>Buy Now</button></Link>
         <div className='second'>
