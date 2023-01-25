@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <Wrapper>
         <div className='first'>
-            <h2>Buy and sell gold</h2>
-            <p>DukiaGold, your trustworthy refinery & bullion merchant.</p>
+            <h2>Buy & sell gold</h2>
+            <p>Dukia Gold, your trustworthy refinery & bullion merchant.</p>
         </div>
         <Link to={'/open-account'}><button>Buy Now</button></Link>
         <div className='second'>
@@ -47,7 +47,7 @@ const Wrapper = styled.aside`
     text-align: center;
 }
 h2{
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bolder;
 }
 .second{

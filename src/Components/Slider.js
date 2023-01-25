@@ -78,7 +78,7 @@ const Wrapper = styled.div`
 background-color: gray;
 max-width: 90%;
 margin: 2rem auto;
-padding: 2rem;
+padding: 1rem;
 .card{
     width: 80%;
     height: 13rem;
@@ -87,6 +87,8 @@ padding: 2rem;
     gap: 1rem;
     place-items: center;
     border-radius: 0.3rem;
+    margin: 0 auto;
+    /* align-self: center; */
     /* align-items: center;
     justify-content: center; */
 }
