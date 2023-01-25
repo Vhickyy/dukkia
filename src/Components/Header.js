@@ -122,7 +122,7 @@ const Wrapper = styled.header`
         color: yellow;
     }
     .top{
-        background-color: black;
+        background-color: white;
         color: #fff;
         height: 100%;
         width: 6rem;
