@@ -10,7 +10,7 @@ const LiveGoldPrice = () => {
     try {
       const response = await axios('https://outlets.goldline.co.uk/outlets/GetSpringFountPricesXML.asp?Key=foUntAinS!71x')
       const data = response.text()
-      // console.log(data);
+      console.log(data);
       const parser = new DOMParser()
       const doc = parser.parseFromString(data,"application/xml")
       const bidPrice = doc.getElementsByTagName('USD')[0].getElementsByTagName('Au')[0].getElementsByTagName('Ask')[0].textContent;
