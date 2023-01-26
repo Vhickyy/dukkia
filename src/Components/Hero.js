@@ -51,8 +51,8 @@ h2{
     font-weight: bolder;
 }
 .second{
-    width: 60%;
-    height: 40%;
+    width: 70%;
+    height: 50%;
     /* border-radius: 50%; */
     background-color: whitesmoke;
 }
