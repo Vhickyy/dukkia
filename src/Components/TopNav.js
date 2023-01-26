@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { useDukia } from '../context/DukiaContext';
 import { FaBars, FaCartPlus, FaTimes } from 'react-icons/fa';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
-// AiOutlineShoppingCart
+import LiveGoldPrice from './LiveGoldPrice';
 
 const TopNav = () => {
     const {show,openSidebar,closeSidebar} = useDukia();
@@ -13,10 +13,11 @@ const TopNav = () => {
         <nav>
             <div className='top-nav'>
                 <div className='container flex-nav'>
-                    <div className='top'>
+                    {/* <div className='top'>
                         <h4>Buy</h4>
                         <p className='top-p'>$432.43/oz</p>
-                    </div>
+                    </div> */}
+                    <LiveGoldPrice/>
                     <div className='top-btn'>
                         <AiOutlineShoppingCart className='cart'/>
                         <Link>Sign in</Link>
@@ -60,7 +61,7 @@ const Wrapper = styled.header`
 /* } */
 .top-nav{
     width: 100%;
-    height: 3.5rem;
+    height: 2.5rem;
 }
 .end-nav{
     width: 100%;
@@ -99,7 +100,7 @@ img{
 }
 button{
     width: 6rem;
-    padding: .4rem .4rem;
+    padding: 0.2rem .4rem;
     border: none;
     border-radius: 0.5rem;
     background-color: #244D91;
