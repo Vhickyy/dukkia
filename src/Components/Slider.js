@@ -81,7 +81,7 @@ const Slider = () => {
 export default Slider
 
 const Wrapper = styled.div`
-background-color: gray;
+background-color: #fff;
 max-width: 90%;
 margin: 2rem auto;
 padding: 1rem;
@@ -94,6 +94,7 @@ padding: 1rem;
     place-items: center;
     border-radius: 0.3rem;
     margin: 0 auto;
+  padding: 6px;
     /* align-self: center; */
     /* align-items: center;
     justify-content: center; */

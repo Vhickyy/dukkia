@@ -29,7 +29,7 @@ const LiveGoldPrice = () => {
       {ask}
       {bid}
           {/* <div className='top'> */}
-            <span> Buy: </span> <span className='top-p'>$178.43/oz</span> <span>Sell: </span> $178.9
+            <span className='label'> Buy: </span> <span className='top-p'>$178.43/oz</span> <span>  Sell: </span> $178.9
         {/* </div> */}
     </Wrapper>
   )
@@ -48,6 +48,8 @@ const Wrapper = styled.div`
         /* background-color: black; */
     color: blue;
     height: 100%;
+    parring: 8px;
+    
     /* width: 5.5rem; */
     background-color: yellow;
     display: flex;
