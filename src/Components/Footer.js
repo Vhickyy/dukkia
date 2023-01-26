@@ -49,7 +49,7 @@ margin-top: 4rem;
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    background-color: red;
+    /* background-color: red; */
 }
 input{
     height: 2rem;
