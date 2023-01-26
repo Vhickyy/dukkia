@@ -47,17 +47,17 @@ margin-top: 4rem;
 }
 .news{
     text-align: center;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
-    /* background-color: red; */
+    background-color: red;
 }
 input{
     height: 2rem;
-    width: 80%;
+    width: 15rem;
 }
 button{
     height: 2rem;
-    width: 20%;
+    width: 5rem;
     /* padding: 0 1rem; */
 }
 .links{
@@ -79,7 +79,7 @@ a{
     justify-content: space-between;
     align-items: center;
     /* background-color: blue; */
-    width: 7rem;
+    width: 6rem;
 }
 
 `

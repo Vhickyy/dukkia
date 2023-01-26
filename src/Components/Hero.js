@@ -19,7 +19,7 @@ const Hero = () => {
 export default Hero
 const Wrapper = styled.aside`
     /* background-color: burlywood; */
-    height: 55vh;
+    height: 60vh;
     /* background-color: yellow; */
     /* padding: 2.5rem 0;
     display: grid;
