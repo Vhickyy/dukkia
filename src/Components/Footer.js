@@ -11,8 +11,8 @@ const Footer = () => {
 export default Footer
 
 const Wrapper = styled.footer`
-background-color: #322F2F;
+background-color: black;
 text-align: center;
 padding: 1rem 0;
-color: #746A44;
+color: #fff;
 `
