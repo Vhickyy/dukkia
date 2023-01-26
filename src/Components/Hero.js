@@ -19,7 +19,7 @@ const Hero = () => {
 export default Hero
 const Wrapper = styled.aside`
     /* background-color: burlywood; */
-    height: 60vh;
+    height: 70vh;
     /* background-color: yellow; */
     /* padding: 2.5rem 0;
     display: grid;
@@ -35,6 +35,9 @@ const Wrapper = styled.aside`
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
 .first{
     justify-self: center;
     /* display: flex;
@@ -51,16 +54,16 @@ h2{
     font-weight: bolder;
 }
 .second{
-    width: 70%;
-    height: 50%;
+    /* width: 70%;
+    height: 50%; */
     /* border-radius: 50%; */
-    background-color: whitesmoke;
+    /* background-color: pink; */
 }
 img{
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+    width: 15rem;
+    height: 15rem;
     display: block;
+    /* object-fit: contain; */
     /* border-radius: 50%; */
     
     /* border-radius: .5rem; */
