@@ -55,6 +55,7 @@ const Wrapper = styled.header`
 /* nav{ */
     position: sticky;
     top: 0px;
+    z-index: 1000;
     backdrop-filter: blur(10px);
 /* } */
 .top-nav{
