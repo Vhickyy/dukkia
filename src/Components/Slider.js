@@ -1,5 +1,11 @@
 import React from 'react'
 import hero from '../Images/krugger.JPG'
+
+import p2 from '../Images/10gram.JPG'
+import p3 from '../Images/50gram.JPG'
+import p4 from '../Images/100gram.JPG'
+
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styled from 'styled-components';
@@ -36,15 +42,15 @@ const Slider = () => {
                 <p>krugger</p>
             </div>
             <div className='card'>
-                <img src={hero} alt="" />
+                <img src={p2} alt="" />
                 <p>krugger</p>
             </div>
             <div className='card'>
-                <img src={hero} alt="" />
+                <img src={p3} alt="" />
                 <p>krugger</p>
             </div>
             <div className='card'>
-                <img src={hero} alt="" />
+                <img src={p4} alt="" />
                 <p>krugger</p>
             </div>
             <div className='card'>
