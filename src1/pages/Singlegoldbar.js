@@ -6,6 +6,7 @@ import Specification from "../Components/Specification"
 import ProductDescription from "../Components/GoldbarProductDescription"
 import Goldbarform from "../Components/Goldbarform"
 import { useDukia } from "../context/DukiaContext"
+import TablePrice from "../Components/TablePrice"
 const Singlegoldbar = ({order}) => {
   const {closeSidebar} = useDukia();
   const {id} = useParams()
@@ -41,9 +42,10 @@ const Singlegoldbar = ({order}) => {
       </div>
       <div className="spec2">
         <Specification amount={oneItem.amount}/>
-        <p>{order} order</p>
-        <p>Name: {oneItem.name}</p>
-        <Goldbarform order={order} name={oneItem.name}/>
+        {/* <p>{order} order</p>
+        <p>Name: {oneItem.name}</p> */}
+        {/* <Goldbarform order={order} name={oneItem.name}/> */}
+        <TablePrice/>
       </div>
       
     </Wrapper>
@@ -57,7 +59,7 @@ padding: 3rem 0;
 width: 85%;
 margin: 0 auto;
 line-height: 1.8rem;
-font-size: 1.2rem;
+/* font-size: 1.2rem; */
 display: grid;
 gap: 2rem;
 .image-container{
