@@ -1,7 +1,13 @@
 import React from 'react'
+import { Routes,Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Register from './pages/Register'
 
 export default function App() {
   return (
-    <div className='bg-blue-500 '>App</div>
+    <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/register' element={<Register/>}/>
+    </Routes>
   )
 }
