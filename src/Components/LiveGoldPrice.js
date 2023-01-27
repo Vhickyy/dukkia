@@ -10,12 +10,12 @@ const LiveGoldPrice = () => {
     try {
       const response = await axios('https://outlets.goldline.co.uk/outlets/GetSpringFountPricesXML.asp?Key=foUntAinS!71x')
       const data = response.text()
-      // console.log(data);
+      console.log(data);
       const parser = new DOMParser()
       const doc = parser.parseFromString(data,"application/xml")
       const bidPrice = doc.getElementsByTagName('USD')[0].getElementsByTagName('Au')[0].getElementsByTagName('Ask')[0].textContent;
       const askPrice = doc.getElementsByTagName('USD')[0].getElementsByTagName('Au')[0].getElementsByTagName('Ask')[0].textContent;
-      setAsk(askPrice)
+      setAsk(data)
       setBid(bidPrice)
     } catch (error) {
       console.log(error);
@@ -27,7 +27,6 @@ const LiveGoldPrice = () => {
   return (
     <Wrapper>
       {ask}
-      {bid}
           {/* <div className='top'> */}
             <span className='label'> Buy: </span> <span className='top-p'>$178.43/oz</span> <span>  Sell: </span> $178.9
         {/* </div> */}
