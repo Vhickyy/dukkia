@@ -5,7 +5,7 @@ import Sidebar from './Sidebar'
 
 const Header = () => {
   return (
-    <nav className='sticky w-full  z-[99] '>
+    <nav className='sticky top-0 w-full  z-[99] '>
       <Sidebar/>
       <div className='bg-yellow-500 h-[7vh] flex items-center'>
         <div className='w-[80%] mx-auto flex items-center justify-between'>
@@ -19,9 +19,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className='bg-blue-500 h-[7vh] flex items-center'>
+      <div className='bg-[#244D91] h-[7vh] flex items-center'>
         <div className=' w-[80%] mx-auto flex items-center justify-between'>
-          <img src="https://dukiagoldrefinery.co/images/logo_centre_web.png" alt="dukia" />
+          <img src="https://dukiagoldrefinery.co/images/logo_centre_web.png" alt="dukia" className='h-[2rem] w-[2rem]' />
           <FaBars size={'1.3rem'} className='md:hidden'/>
           <div className='hidden md:flex items-center justify-between w-[60%]'>
             <p>Goldbars</p>
