@@ -7,10 +7,10 @@ import Slider from '../components/Slider'
 const Home = () => {
   return (
     <div>
-        <Header/>
+        {/* <Header/> */}
         <Hero/>
         <Slider/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }
