@@ -9,12 +9,12 @@ const Singlegoldcoin = () => {
     console.log(filtered);
   return (
     <div className='bg-[whitesmoke] min-h-[86vh] py-[3rem]'>
-        <div className='w-[80%] mx-auto '>
+        <div className='w-[80%] mx-auto bg-yellow-500'>
             <p>{filtered.name}</p>
             <div className='grid md:grid-cols-2 gap-5'>
                 <div>
-                    <div className='py-[1rem] bg-white rounded-md drop-shadow-md w-full'>
-                        <img src={filtered.img} alt="" className='w-[90%] mx-auto'/>
+                    <div className='py-[1rem] bg-white rounded-md drop-shadow-md w-full h-[23rem]'>
+                        <img src={filtered.img} alt="" className='w-[80%] mx-auto h-full object-contain'/>
                     </div>
                     <div className='flex'>
                         <button className=''><FaMinus/></button>
@@ -43,9 +43,7 @@ const Singlegoldcoin = () => {
                 <p>The gold coin is VAT free if the secure storage option with Brink's is opted for. Storage fee is free for the first 12 months of storage. Your specific numbered gold bar will be fully allocated to you in your name and segregated within the vault.</p>
                 <p>All shipping costs is inclusive of handling, protective packaging, insurance, and VAT. The cost of shipping to your preferred location will be advised upon request.</p>
             </div>
-            
         </div>
-
     </div>
   )
 }
