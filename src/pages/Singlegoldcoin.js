@@ -11,10 +11,10 @@ const Singlegoldcoin = () => {
     <div className='bg-[whitesmoke] min-h-[86vh] py-[3rem]'>
         <div className='w-[80%] mx-auto '>
             <p>{filtered.name}</p>
-            <div className='grid sm:grid-cols-2 sm:gap-7'>
+            <div className='grid md:grid-cols-2 gap-5'>
                 <div>
-                    <div className='p-[2rem] bg-white rounded-md drop-shadow-md w-full'>
-                        <img src={filtered.img} alt="" />
+                    <div className='py-[1rem] bg-white rounded-md drop-shadow-md w-full'>
+                        <img src={filtered.img} alt="" className='w-[90%] mx-auto'/>
                     </div>
                     <div className='flex'>
                         <button className=''><FaMinus/></button>
@@ -24,7 +24,7 @@ const Singlegoldcoin = () => {
                     </div>
                 </div>
               
-                <div>
+                <div className='md:ml-10'>
                     <h4>Specification</h4>
                     <p><span>Manufacturer: </span>{filtered.Manufacturer}</p>
                     <p><span>Country of origin: </span>{filtered.Country}</p>
