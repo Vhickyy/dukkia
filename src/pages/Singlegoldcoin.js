@@ -9,7 +9,7 @@ const Singlegoldcoin = () => {
     console.log(filtered);
   return (
     <div className='bg-[whitesmoke] min-h-[86vh] py-[3rem]'>
-        <div className='w-[80%] mx-auto bg-yellow-500'>
+        <div className='w-[80%] mx-auto'>
             <p>{filtered.name}</p>
             <div className='grid md:grid-cols-2 gap-5'>
                 <div>
