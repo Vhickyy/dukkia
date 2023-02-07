@@ -8,7 +8,7 @@ const Hero = () => {
         <h2 className='text-4xl bold capitalize'>Buy & sell gold</h2>
         <p>Dukia Gold, your trustworthy refinery & bullion merchant.</p>
       </div>
-      <div className=' w-[50%] h-[50%] md:w-[40%] h-[40%]'>
+      <div className=' w-[50%] h-[50%] md:w-[40%] h-[40%] opacity-40'>
         <img src="https://dukiagoldrefinery.co/images/logo_centre_web.png" alt="" className='w-full h-full' />
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='bg-[#322F2F] text-white'>
-        <div className='w-[80%] mx-auto py-[1.5rem] grid gap-[2rem]'>
+        <div className='w-[90%] lg:w-[80%] mx-auto py-[1.5rem] grid gap-[2rem]'>
             <div className='md:w-[85%] md:mx-auto '>
                 <label htmlFor="news" className='hidden'>Sign up for updated from dukia gold.</label>
                 <p>Sign up for updated from dukia gold.</p>

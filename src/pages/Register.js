@@ -3,7 +3,7 @@ import React from 'react'
 const Register = () => {
   return (
     <div className='bg-[whitesmoke] min-h-[86vh] py-[2rem] flex justify-center items-center rounded-sm'>
-      <div className='w-[80%] mx-auto bg-white'>
+      <div className='w-[90%] lg:w-[80%] mx-auto bg-white'>
         <form className='px-[1rem] grid gap-3 py-[2rem]'>
           <div className='grid gap-2'>
             <p className='capitalize'>Personal Information</p>

@@ -8,7 +8,7 @@ const Singlegoldbar = () => {
   const filtered =data.find(coin=>coin.id==id)
   return (
     <div className='bg-[whitesmoke] min-h-[86vh] py-[3rem]'>
-      <div className='w-[80%] mx-auto '>
+      <div className='w-[90%] lg:w-[80%] mx-auto '>
         <h3>Philoro Gold Minted Bar of 999.9 fineness</h3>
         <div className='grid md:grid-cols-2 gap-5'>
         <div>

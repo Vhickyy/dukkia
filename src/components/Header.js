@@ -11,7 +11,7 @@ const Header = () => {
     <nav className='sticky top-0 w-full  z-[99] '>
       <Sidebar/>
       <div className='bg-yellow-500 h-[7vh] flex items-center'>
-        <div className='w-[80%] mx-auto flex items-center justify-between'>
+        <div className='w-[90%] lg:w-[80%] mx-auto flex items-center justify-between'>
           <div>
             <span>buy</span>
           </div>
