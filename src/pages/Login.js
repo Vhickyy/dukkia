@@ -17,14 +17,13 @@ const Login = () => {
         }
         try {
             setLoginVal({...loginVal,loading:true})
-            const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/auth/login",{email:"samdoxiso@gmail.com",password:"sasa"},{headers:{"Content-Type":"application/x-www-form-urlencoded"}});
+            const {data} = await axios.post("https://php-server-repl-api.samueliso.repl.co/api/auth/login",{email:loginVal.email,password:loginVal.password},{headers:{"Content-Type":"application/x-www-form-urlencoded"}});
                 navigate('/dashboard')
                 localStorage.setItem('token',JSON.stringify(data.data))
                 console.log(data);
                 setLoginVal({...loginVal,loading:false})
         } catch (error) {
-            setLoginVal({...loginVal,loading:false,error:error?.response?.data.data})
-            console.log(error?.response?.data);
+            setLoginVal({...loginVal,loading:false,error:error?.response?.data.data});
         }
     }
   return (
