@@ -36,24 +36,24 @@ const Login = () => {
              <div className='grid gap-4'>
                 <label htmlFor="email" className='hidden'>Email</label>
                 <div className='flex border items-center'>
-                    <FaPortrait className='w-[20%] bg-blue-300 h-[2.5rem] py-2'/>
-                    <input type="text" className=' rounded-sm pl-2 h-[2.5rem] w-full bg-[whitesmoke]' id='name' placeholder='Email' autoComplete='off'
+                    <FaPortrait className='w-[20%] bg-[#244D91] h-[2.5rem] py-2 text-white'/>
+                    <input type="text" className=' rounded-sm pl-2 h-[2.5rem] w-full bg-[whitesmoke] ' id='name' placeholder='Email' autoComplete='off'
                     name='email'
                     value={loginVal.email}
                     onChange={change}/>
                 </div>
                 <label htmlFor="password" className='hidden'>Password</label>
                 <div className='flex border items-center'>
-                    <FaKey className='w-[20%] bg-blue-300 h-[2.5rem] py-2'/>
+                    <FaKey className='w-[20%] bg-[#244D91] h-[2.5rem] py-2 text-white'/>
                     <input type="password" className='pl-2 rounded-sm h-[2.5rem] w-full bg-[whitesmoke] border-none' id='password' placeholder='Password' autoComplete='off'
                     name='password'
                     value={loginVal.password}
                     onChange={change}/>
                 </div>
             </div>
-                <button className='bg-blue-300 rounded-sm p-2 mt-4' disabled={loginVal.loading}>{loginVal.loading ? 'Loading...' : 'Submit'}</button>
+                <button className='bg-[#244D91] rounded-sm p-2 mt-4' disabled={loginVal.loading}>{loginVal.loading ? 'Loading...' : 'Submit'}</button>
                 <p className='mt-4'>Don't have an account?</p>
-                <Link to={'/register'}><button className='bg-blue-300 rounded-sm p-2  w-full' disabled={loginVal.loading}>Create an account</button></Link>
+                <Link to={'/register'}><button className='bg-[#244D91] rounded-sm p-2  w-full' disabled={loginVal.loading}>Create an account</button></Link>
             </form>
             </div>
         </div>
