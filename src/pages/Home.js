@@ -1,4 +1,5 @@
 import React from 'react'
+import Display from '../components/Display'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -9,7 +10,8 @@ const Home = () => {
     <div>
         {/* <Header/> */}
         <Hero/>
-        <Slider/>
+        <Display/>
+        {/* <Slider/> */}
         {/* <Footer/> */}
     </div>
   )

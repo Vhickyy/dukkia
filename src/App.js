@@ -7,6 +7,8 @@ import Home from './pages/Home'
 import Register from './pages/Register'
 import Singlegoldbar from './pages/Singlegoldbar'
 import Singlegoldcoin from './pages/Singlegoldcoin'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
       <Route element={<Layout/>}>
         <Route path='/' element={<Home/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/goldbars' element={<Goldbar/>}/>
         <Route path='/goldcoins' element={<Goldcoin/>}/>
         <Route path='/goldbars/:id' element={<Singlegoldbar/>}/>

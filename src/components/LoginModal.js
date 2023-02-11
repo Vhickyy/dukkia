@@ -2,7 +2,9 @@ import React from 'react'
 
 const LoginModal = () => {
   return (
-    <div>LoginModal</div>
+    <div className='bg-white '>
+      login
+    </div>
   )
 }
 

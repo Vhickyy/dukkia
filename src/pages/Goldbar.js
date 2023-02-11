@@ -10,7 +10,7 @@ const Goldbar = () => {
                     <Link to={`/goldbars/${bar.id}`} className='bg-white rounded-md p-[2rem] drop-shadow-md' key={bar.id}>
                         <div className='grid gap-4'>
                             {/* <div className='w-full h-[23rem]'> */}
-                            <img src={bar.image} alt={bar.title} className='w-full h-[23rem] object-contain'/>
+                            <img src={bar.image} alt={bar.title} className='w-full h-[16rem] object-contain'/>
                             {/* </div> */}
                             <p>{bar.title}</p>
                         </div>

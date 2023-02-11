@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import {FaBars} from 'react-icons/fa'
 import { useDukia } from '../context/DukiaContext'
 import Sidebar from './Sidebar'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const Header = () => {
   const {openSidebar} = useDukia()
@@ -17,7 +17,7 @@ const Header = () => {
           </div>
           <div className='flex items-center justify-between w-[11rem] md:w-[30%]'>
             <AiOutlineShoppingCart size={'1.3rem'}/>
-            <p>Sign in</p>
+            <Link to={'/login'}>Sign in</Link>
             <button>Get Started</button>
           </div>
         </div>
