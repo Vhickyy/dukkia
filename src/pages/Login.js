@@ -32,7 +32,7 @@ const Login = () => {
         <p>Home <span>Login</span></p>
         <div className='flex jutify-center items-center my-[2rem] flex-col'>
             {loginVal.error && <Alert loginVal={loginVal} setLoginVal={setLoginVal}/>}
-            <form className='w-full sm:w-[70%] lg:w-[50%] mx-auto bg-white rounded-md drop-shadow-sm py-[3rem] px-[2rem] md:px-[4rem] grid gap-2' onSubmit={submit}>
+            <form className='w-full sm:w-[70%] lg:w-[50%] mx-auto bg-white rounded-md drop-shadow-sm py-[3rem] px-[.5rem] md:px-[4rem] grid gap-2' onSubmit={submit}>
              <div className='grid gap-4'>
                 <label htmlFor="email" className='hidden'>Email</label>
                 <div className='flex border items-center'>
@@ -51,9 +51,9 @@ const Login = () => {
                     onChange={change}/>
                 </div>
             </div>
-                <button className='bg-[#244D91] rounded-sm p-2 mt-4' disabled={loginVal.loading}>{loginVal.loading ? 'Loading...' : 'Submit'}</button>
+                <button className='bg-[#244D91] rounded-sm p-3 mt-4 text-white' disabled={loginVal.loading}>{loginVal.loading ? 'Loading...' : 'Submit'}</button>
                 <p className='mt-4'>Don't have an account?</p>
-                <Link to={'/register'}><button className='bg-[#244D91] rounded-sm p-2  w-full' disabled={loginVal.loading}>Create an account</button></Link>
+                <Link to={'/register'}><button className='bg-[#244D91] rounded-sm p-3 w-full text-white' disabled={loginVal.loading}>Create an account</button></Link>
             </form>
             </div>
         </div>
